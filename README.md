@@ -7,5 +7,6 @@ Desarrollo de Vitalia, la e-commerce de productos naturales para la salud.
 * Sofía Carolina Rojas Flores
 * Jesús Hernández Salinas
 * Brandon Jacob Bazán Murillo
-* Rebeca Yaneth Jiménez Aguillón 
+* Rebeca Yaneth Jiménez Aguillón
+* Dania Paulina Cornejo Mancilla
 * Daniel Martínez Díaz

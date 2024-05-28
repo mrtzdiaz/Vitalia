@@ -1,0 +1,29 @@
+.contenedor {
+    margin: 2em;
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.equipo {
+    margin: 0.5em;
+    border:  solid blueviolet;
+    width: 17.5em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.foto {
+    border: solid black;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+}
+.resumen {
+    border: solid black;
+    height: 8em;
+    width: 17em;
+}

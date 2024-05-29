@@ -5,7 +5,16 @@ body {
     background-color: #f8f8f8;
     margin: 0;
 }
+.container {
+    margin: 1em;
+}
+.container img {
+    border-radius: 1em;
+}
+.container p {
+    text-align: justify;
 
+}
 .contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -59,12 +68,12 @@ body {
     font-style: oblique;
     font-size: 22px;
 }
-img{
+.flip-card-front img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2%;
-    height: 2%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-bottom: 1em; /* Espacio entre la foto y la información */
 }
@@ -83,8 +92,10 @@ img{
     }
 
     .flip-card-front img {
-        height: 150px;
+        height: 100px;
+        width: 150px;
     }
+  
 }
 @media (max-width: 460px) {
     .flip-card {
@@ -95,6 +106,8 @@ img{
     .flip-card-front img {
         height: 160px;
     }
+   
+   
 }
 
 /* Estilos Footer */
@@ -117,7 +130,7 @@ img{
     justify-content: space-around;
     align-items: center;
 }
-img{
+.logo-footer{
     width: 200px;
     height: 200px;
     margin: 15px;

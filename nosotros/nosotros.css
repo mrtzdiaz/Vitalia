@@ -21,6 +21,7 @@ body {
     height: 500px;
     perspective: 1000px; /* Ajusta la perspectiva del flip card */
     margin-bottom: 20px; /* Espacio entre las tarjetas */
+    margin: 20px 20px;
 }
 .flip-card-inner {
     position: relative;
@@ -75,6 +76,26 @@ img{
     height: 18em;
     width: 17em;
 }
+@media (max-width: 748px) {
+    .flip-card {
+        width: 15%;
+        height: 500px;
+    }
+
+    .flip-card-front img {
+        height: 150px;
+    }
+}
+@media (max-width: 460px) {
+    .flip-card {
+        width: 95%;
+        height: 250px;
+    }
+
+    .flip-card-front img {
+        height: 160px;
+    }
+}
 
 /* Estilos Footer */
 
@@ -102,7 +123,7 @@ img{
     margin: 15px;
 }
 
- .contenedor-iconos{
+.contenedor-iconos{
     margin-top: 10px;
     margin-bottom: 10px;
 } 

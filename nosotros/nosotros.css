@@ -1,3 +1,8 @@
+*{ 
+    font-family: "Didact Gothic", sans-serif; 
+    font-weight: 400;  /*tipografia*/
+    font-style: normal; }
+
 body {
     display: flex;
     justify-content: center;
@@ -20,14 +25,24 @@ body {
     text-shadow: #FF6B6B 4px 4px;
 }
 
+.acercade{
+    margin: 20px;
+}
+
+.acercade img{
+    border-radius: 10px;
+}
+
+.acercade p{
+    text-align: justify;
+}
+
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     height: 300%;
-    
-    
 }
 .flip-card {
     background-color: transparent;
@@ -35,6 +50,7 @@ body {
     height: 500px;
     perspective: 1000px; /* Ajusta la perspectiva del flip card */
     margin-bottom: 20px; /* Espacio entre las tarjetas */
+    margin: 20px 20px;
 }
 .flip-card-inner {
     position: relative;
@@ -72,13 +88,12 @@ body {
     font-style: oblique;
     font-size: 22px;
 }
-
-img{
+.flip-card-front img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2%;
-    height: 2%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-bottom: 1em; /* Espacio entre la foto y la información */
 }
@@ -90,6 +105,29 @@ img{
 .resumen {
     height: 18em;
     width: 17em;
+}
+@media (max-width: 748px) {
+    .flip-card {
+        width: 15%;
+        height: 500px;
+    }
+
+    .flip-card-front img {
+        height: 100px;
+        width: 150px;
+    }
+
+}
+@media (max-width: 460px) {
+    .flip-card {
+        width: 95%;
+        height: 250px;
+    }
+
+    .flip-card-front img {
+        height: 160px;
+    }
+ 
 }
 
 /* Estilos Footer */
@@ -118,7 +156,7 @@ img{
     margin: 15px;
 }
 
- .contenedor-iconos{
+.contenedor-iconos{
     margin-top: 10px;
     margin-bottom: 10px;
 } 

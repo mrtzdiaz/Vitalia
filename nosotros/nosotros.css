@@ -115,9 +115,9 @@ body {
 .resumen {
   height: 18em;
   width: 17em;
+  font-size: 15px;
 }
 /* FOOTER */
-
 .contenedor-footer {
   background-color: #143027;
   color: white;
@@ -175,6 +175,11 @@ body {
   .flip-card-front img {
     height: 100px;
     width: 150px;
+  }
+
+  .resumen {
+    font-size: 0.9rem;
+    padding-top: 25px;
   }
 
   .hablemos {

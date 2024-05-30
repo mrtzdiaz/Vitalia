@@ -158,7 +158,15 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 748px) {
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand img {
+    width: 150px;
+  }
+
   .flip-card {
     width: 15%;
     height: 500px;
@@ -188,7 +196,15 @@ body {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 576px) {
+  .navbar-nav .nav-item {
+    font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 120px;
+  }
+
   .flip-card {
     width: 95%;
     height: 250px;

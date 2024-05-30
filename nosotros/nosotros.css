@@ -167,6 +167,10 @@ body {
     width: 150px;
   }
 
+  .acercade p {
+    font-size: 1rem;
+  }
+
   .flip-card {
     width: 15%;
     height: 500px;
@@ -174,10 +178,10 @@ body {
 
   .flip-card-front img {
     height: 100px;
-    width: 150px;
+    width: auto;
   }
 
-  .resumen {
+  .resumen  {
     font-size: 0.9rem;
     padding-top: 25px;
   }
@@ -208,6 +212,10 @@ body {
 
   .navbar-brand img {
     width: 120px;
+  }
+
+  .acercade p {
+    font-size: 1rem;
   }
 
   .flip-card {

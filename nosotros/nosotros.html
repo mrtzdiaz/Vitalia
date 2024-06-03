@@ -14,6 +14,7 @@
         <!-- SECCION DE NAVBAR -->
         <header class="sticky-top">
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
+                <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="/img/VITALIALOGO.svg" alt="VITALIA" width="200">
                 </a>
@@ -24,32 +25,31 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="col-6 col-md-8">
-                        <ul class="navbar-nav nav-underline mx-5" style="display: flex; justify-content: space-between;">
-                            <li class="nav-item" style="font-size: 1.5rem;">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
                                 <a class="nav-link" style="color: white;" href="#">Inicio</a>
                             </li>
-                            <li class="nav-item" style="font-size: 1.5rem;">
+                            <li class="nav-item">
                                 <a class="nav-link" style="color: white;" href="#">Productos</a>
                             </li>
-                            <li class="nav-item" style="font-size: 1.5rem;">
+                            <li class="nav-item">
                                 <a class="nav-link" style="color: white;" href="#">Carrito</a>
                             </li>
-                            <li class="nav-item" style="font-size: 1.5rem;">
+                            <li class="nav-item">
                                 <a class="nav-link active" style="color: #FF6B6B;" href="#">Nosotros</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-6 col-md-3 mt-md-3">
-                        <form class="d-flex ms-5">
-                            <div class="input-group mb-1">
+                        <form class="d-none d-lg-flex ms-lg-5 mt-3 mt-lg-0">
+                            <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Busqueda..."
                                     aria-label="Recipient's username" aria-describedby="button-addon2">
                                 <button class="btn btn-outline-secondary" type="button"
                                     id="button-addon2" style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>
                         </form>
-                    </div>
                 </div>
                 </div>
+            </div>
             </nav>
         </header>
 
@@ -60,7 +60,7 @@
             </div>
         </section>
 
-        <!-- SECCION TARJETAS -->
+        <!-- SECCION ACERCA DE VITALIA -->
         <section class="acercade">
             <div class="container">
                 <div class="row">
@@ -84,6 +84,7 @@
                 </div>
             </div>
         </section>
+<!-- SECCION TARJETAS -->
         <section class="contenedor">
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -217,12 +218,13 @@
         </section>
         <!-- SECCION FOOTER -->
         <footer>
-            <div class="contenedor-footer">
+            <div class="contenedor-footer mt-5">
+                <div class="container-fluid">
                 <div class="row footer-primera-fila">
-                    <div class="col-12 col-md-6  footer-izquierda ">
+                    <div class="col-12 col-md-6  footer-izquierda text-center text-md-start">
                         <!-- <i class="bi bi-facebook"></i> -->
-                        <img class="logo-footer" src="/img/VITALIALOGO.svg" alt="Vitalia" width="400">
-                        <div class="contenedor-iconos">
+                        <img class="logo-footer" src="/img/VITALIALOGO.svg" alt="Vitalia" width="200">
+                        <div class="contenedor-iconos mt-3">
                             <a id="facebook" href=""><i class="bi bi-facebook"></i></a>
                             <a id="instagram" href=""><i class="bi bi-instagram"></i></a>
                             <a id="linkedin" href=""><i class="bi bi-linkedin"></i></a>
@@ -230,7 +232,7 @@
                         </div>
                         <p>Contacto <br> vitalia@email.com</p>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 mt-4 mt-md-0 text-center">
                         <p class="hablemos">Hablemos!</p>
                         <p class="parrafo-hablemos">Si tienes alguna pregunta específica sobre nosotros, nuestros productos o nuestras ubicaciones, no dudes 
                             en ponerte en contacto con nosotros a través de nuestras redes sociales. También puedes hacer clic en el siguiente 
@@ -238,18 +240,19 @@
                     </div>
                 </div>
                 
-                <div class="row footer-segunda-fila">
+                <div class="row footer-segunda-fila mt-4">
                     <hr>
-                    <div class="col-12 col-md-7 nav-footer">
+                    <div class="col-12 col-md-7 nav-footer d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center">
                         <a href="#">Inicio</a>
                         <a href="#">Productos</a>
                         <a href="#">Carrito</a>
                         <a href="#">Nosotros</a>
                     </div>
-                    <div class="col-12 col-md-5 mt-5">
-                        <p>Únete a nuestra comunidad en redes sociales! Vatalia, siempre presente</p>
+                    <div class="col-12 col-md-5 text-center text-md-end mt-4 mt-md-0">
+                        <p>Únete a nuestra comunidad en redes sociales! Vatalia, siempre presente.</p>
                     </div>
                 </div>
+            </div>
             </div>
         </footer>
     </main>

@@ -56,7 +56,7 @@ function validacionMensaje() {
     return true
 };
 
-// FUNCION BUTON
+// FUNCION BOTON
 btn.addEventListener("click", function (event) {
     event.preventDefault();
     alerta.style.display = "none";
@@ -85,8 +85,18 @@ btn.addEventListener("click", function (event) {
     }
 });
 
+function mostrarAlerta(mensaje, tipo) {
+    const alerta = document.getElementById('alert-container');
+    const alertaDiv = document.createElement('div');
+    alertaDiv.className = `alert alert-${tipo} alert-dismissible fade show`;
+    alertaDiv.role = 'alert';
+    alertaDiv.innerHTML = `
+        ${mensaje}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    alerta.appendChild(alertaDiv);
+};
 
-// Función para mandar el correo
 function enviarCorreo() {
     btn.value = 'Enviando...';
     const serviceID = 'default_service';
@@ -94,10 +104,10 @@ function enviarCorreo() {
 
     emailjs.sendForm(serviceID, templateID, form)
         .then(() => {
-            btn.value = 'Enviado!';
-            alert('Enviado!');
+            btn.value = 'Enviar';
+            mostrarAlerta('Enviado!', 'success');
         }, (err) => {
-            btn.value = 'Send Email';
-            alert(JSON.stringify(err));
+            btn.value = 'Enviar';
+            mostrarAlerta('Error: ' + JSON.stringify(err), 'danger');
         });
 };

@@ -240,26 +240,27 @@
                     y esperamos con interés escucharte pronto.</p>
             </div>
             <div class="forma">
-                <form class="row g-3">
+                <form class="row g-3" id="form">
                     <div class="col-md-6">
-                        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+                        <div class="alert alert-danger fade show" style="display:none;" role="alert"
+                            id="alertValidaciones">
                             <p id="alertValidacionesTexto"></p>
                         </div>
-                        <label for="inputEmail4" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="inputNombre" placeholder="vitalia">
+                        <label for="from_name" class="form-label">Nombre</label>
+                        <input name="from_name" type="text" class="form-control" id="from_name" placeholder="vitalia">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="inputEmail"
+                        <label for="user_email" class="form-label">Correo electrónico</label>
+                        <input name="user_email"  type="email" class="form-control" id="user_email"
                             placeholder="vitalia.soporte@gmail.com">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Teléfono</label>
-                        <input type="number" class="form-control" id="inputNumber" placeholder="55.12.34.56.78">
+                        <label for="user_cel" class="form-label">Teléfono</label>
+                        <input name="user_cel" type="number" class="form-control" id="user_cel" placeholder="55.12.34.56.78">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Mensaje</label>
-                        <input type="text" class="form-control" id="inputMensaje" placeholder="Hola!">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <input name="message" type="text" class="form-control" id="message" placeholder="Hola!">
                     </div>
                     <div class="col-12">
                         <button type="submit" id="btn" class="btn btn-vitalia btn-success">Enviar</button>
@@ -314,7 +315,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="/nosotros/js/nosotros.js" defer></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('gfEfYKVY7PRXL8wjZ')
+    </script>
+
+    <script src="/nosotros/js/nosotros.js" defer></script>
+
 </body>
 
 </html>

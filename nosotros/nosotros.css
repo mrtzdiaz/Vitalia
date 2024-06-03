@@ -117,6 +117,19 @@ body {
   width: 17em;
   font-size: 15px;
 }
+/* FORMA DE CONTACTO */
+.forma {
+  margin: 30px;
+}
+
+#mensaje {
+  height: 100%;
+  opacity: 70%;
+}
+
+.btn-vitalia {
+  margin-top: 4%;
+}
 /* FOOTER */
 .contenedor-footer {
   background-color: #143027;
@@ -181,7 +194,7 @@ body {
     width: auto;
   }
 
-  .resumen  {
+  .resumen {
     font-size: 0.9rem;
     padding-top: 25px;
   }

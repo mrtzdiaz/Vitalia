@@ -1,0 +1,175 @@
+* {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400; /*tipografia*/
+    font-style: normal;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 0;
+  }
+  
+  .wallpaper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-image: url(/img/wallpaper.jpg);
+  }
+  
+  .wallpaper h1 {
+    font-size: 300%;
+    color: white;
+    text-shadow: #ff6b6b 4px 4px;
+  }
+  
+  /* ACERCA DE */
+  .acercade {
+    margin: 0px;
+  }
+  
+  .acercade img {
+    border-radius: 0px;
+  }
+  
+
+  
+
+
+  
+  
+  
+  
+
+  /* FOOTER */
+  .contenedor-footer {
+    background-color: #143027;
+    color: white;
+    padding: 25px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .footer-primera-fila {
+    padding: 20px;
+    color: white;
+  }
+  
+  .footer-segunda-fila {
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .contenedor-iconos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .bi {
+    margin: 10px;
+    font-size: 1.4rem;
+    color: white;
+  }
+  
+  .nav-footer a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+  }
+  .hablemos {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-brand img {
+      width: 150px;
+    }
+  
+    .acercade p {
+      font-size: 1rem;
+    }
+  
+    .flip-card {
+      width: 15%;
+      height: 500px;
+    }
+  
+    .flip-card-front img {
+      height: 100px;
+      width: auto;
+    }
+  
+    .resumen {
+      font-size: 0.9rem;
+      padding-top: 25px;
+    }
+  
+    .hablemos {
+      font-size: 1.1rem;
+    }
+  
+    .parrafo-hablemos {
+      font-size: 0.9rem;
+    }
+  
+    .footer-primera-fila p,
+    .footer-segunda-fila p,
+    .nav-footer a {
+      font-size: 0.9rem;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-nav .nav-item {
+      font-size: 1rem;
+    }
+  
+    .navbar-brand img {
+      width: 120px;
+    }
+  
+    .acercade p {
+      font-size: 1rem;
+    }
+  
+    .flip-card {
+      width: 95%;
+      height: 250px;
+    }
+  
+    .flip-card-front img {
+      height: 160px;
+    }
+  
+    .hablemos {
+      font-size: 1rem;
+    }
+  
+    .parrafo-hablemos {
+      font-size: 0.8rem;
+    }
+  
+    .footer-primera-fila p,
+    .footer-segunda-fila p,
+    .nav-footer a {
+      font-size: 0.8rem;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1rem;
+    }
+  }
+  

@@ -258,3 +258,25 @@ body {
     font-size: 1rem;
   }
 }
+
+/*PRODUCTOS*/
+  h2{
+    text-align: center;
+    padding: 10px;
+    color: #143027;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .card img{
+    width: 100px;
+    height: 300px;
+  }
+
+  .wallpaperProductos{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-image: url(/Vitalia/img/natural\ 1.png);
+
+  }

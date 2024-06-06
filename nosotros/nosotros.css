@@ -288,3 +288,7 @@ body {
   background-image: url(/img/natural\ 1.png);
 
   } */
+
+  .active{
+    color: #FF6B6B !important;
+  }

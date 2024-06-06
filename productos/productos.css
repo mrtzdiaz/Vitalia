@@ -1,0 +1,13 @@
+* {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400; /*tipografia*/
+    font-style: normal;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 0;
+  }

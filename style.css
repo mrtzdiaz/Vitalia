@@ -1,0 +1,134 @@
+* {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400; /*tipografia*/
+    font-style: normal;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 0;
+  }
+
+  .hero-image-container {
+    position: relative;
+    width: 100vw;
+    /* height: 100vh; */
+    overflow: hidden;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .color-text {
+    color: #1A936F;
+  }
+
+  /* FOOTER */
+.contenedor-footer {
+  background-color: #143027;
+  color: white;
+  padding: 25px;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-primera-fila {
+  padding: 20px;
+  color: white;
+}
+
+.footer-segunda-fila {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor-iconos {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bi {
+  margin: 10px;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+.hablemos {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .bienvenido {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    font-size: 1rem;
+  }
+
+  .destacados {
+    font-size: 1rem;
+  }
+
+  .hablemos {
+    font-size: 1.1rem;
+  }
+
+  .parrafo-hablemos {
+    font-size: 0.9rem;
+  }
+
+  .footer-primera-fila p,
+  .footer-segunda-fila p,
+  .nav-footer a {
+    font-size: 0.9rem;
+  }
+
+  .contenedor-iconos .bi {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bienvenido {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    font-size: 1rem;
+  }
+
+  .destacados {
+    font-size: 1rem;
+  }
+  
+  .hablemos {
+    font-size: 1rem;
+  }
+
+  .parrafo-hablemos {
+    font-size: 0.8rem;
+  }
+
+  .footer-primera-fila p,
+  .footer-segunda-fila p,
+  .nav-footer a {
+    font-size: 0.8rem;
+  }
+
+  .contenedor-iconos .bi {
+    font-size: 1rem;
+  }
+}

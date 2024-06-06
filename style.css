@@ -132,3 +132,7 @@
     font-size: 1rem;
   }
 }
+
+.active{
+  color: #ff6b6b !important;
+}

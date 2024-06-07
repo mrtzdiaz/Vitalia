@@ -27,6 +27,9 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 <li class="nav-item">
                     <a class="nav-link " style="color: white;" href="../nosotros/nosotros.html">Nosotros</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " style="color: white;" href="../contactanos/contactanos.html">Contactanos</a>
+                </li>
             </ul>
         </div>
         <form class="d-none d-lg-flex ms-lg-5 mt-3 mt-lg-0">
@@ -55,11 +58,7 @@ header.item(0).insertAdjacentHTML('beforeend', navbar);
      if (url.includes(item.getAttribute('href').replace("..",""))) {
          // Aplicar la clase 'active' al enlace
          item.classList.add('active');
-         console.log(item);
-         console.log("Hello");
      }
-     console.log(url);
-     console.log(item.getAttribute('href'));
  });
 
 

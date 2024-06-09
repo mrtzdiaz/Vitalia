@@ -34,7 +34,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
         </div>
         <form class="d-none d-lg-flex ms-lg-5 mt-3 mt-lg-0">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Busqueda..."
+                <input type="text" class="form-control" placeholder="Búsqueda..."
                     aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"
                     style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>

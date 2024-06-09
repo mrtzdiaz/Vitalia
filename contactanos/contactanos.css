@@ -12,19 +12,19 @@
     margin: 0;
   }
   /* Encabezado contacto */
-  .imagenencabezado{
+  .wrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;    
+    height: 300px;
+    background-image: url(/img/encabezado.png);
   }
   
-
-
-
-
-
-
+  .wrap h1 {
+    font-size: 300%;
+    color: rgb(255, 255, 255);
+    text-shadow: #ff6b6b 4px 4px;
+  }
 
 
   /* FORMA DE CONTACTO */

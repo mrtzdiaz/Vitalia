@@ -1,23 +1,11 @@
-* {
-    font-family: "Didact Gothic", sans-serif;
-    font-weight: 400; /*tipografia*/
-    font-style: normal;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f8f8;
-    margin: 0;
-  }
+
   /* Encabezado contacto */
   .wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
-    background-image: url(/img/encabezado.png);
+    background-image: url(/public/img/encabezado.png);
   }
   
   .wrap h1 {
@@ -48,47 +36,6 @@
   .btn-vitalia {
     margin-top: 4%;
   }
-
-  /* FOOTER */
-  .contenedor-footer {
-    background-color: #143027;
-    color: white;
-    padding: 25px;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .footer-primera-fila {
-    padding: 20px;
-    color: white;
-  }
-  
-  .footer-segunda-fila {
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .contenedor-iconos {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .bi {
-    margin: 10px;
-    font-size: 1.4rem;
-    color: white;
-  }
-  
-  .nav-footer a {
-    text-decoration: none;
-    color: white;
-    margin-right: 10px;
-  }
-  .hablemos {
-    font-weight: bold;
-    font-size: 1.3rem;
-  }
-  
   /* MEDIA QUERIES */
   @media (max-width: 768px) {
     .navbar-nav .nav-item {
@@ -98,8 +45,6 @@
     .navbar-brand img {
       width: 150px;
     }
-
-  
     .footer-primera-fila p,
     .footer-segunda-fila p,
     .nav-footer a {
@@ -140,13 +85,6 @@
     .parrafo-hablemos {
       font-size: 0.8rem;
     }
-  
-    .footer-primera-fila p,
-    .footer-segunda-fila p,
-    .nav-footer a {
-      font-size: 0.8rem;
-    }
-  
     .contenedor-iconos .bi {
       font-size: 1rem;
     }

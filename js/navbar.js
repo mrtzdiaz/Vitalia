@@ -5,7 +5,7 @@ let header = document.getElementsByTagName('header');
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
 <div class="container-fluid">
     <a class="navbar-brand" href="#">
-        <img src="/img/VITALIALOGO.svg" alt="VITALIA" width="200">
+        <img src="../public/img/VITALIALOGO.svg" alt="VITALIA" width="200">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -19,16 +19,16 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                     <a class="nav-link" style="color: white;" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="../productos/productos.html">Productos</a>
+                    <a class="nav-link" style="color: white;" href="../html/productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="../carrito/carrito.html">Carrito</a>
+                    <a class="nav-link" style="color: white;" href="../html/carrito.html">Carrito</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " style="color: white;" href="../nosotros/nosotros.html">Nosotros</a>
+                    <a class="nav-link " style="color: white;" href="../html/nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " style="color: white;" href="../contactanos/contactanos.html">Contactanos</a>
+                    <a class="nav-link " style="color: white;" href="../html/contactanos.html">Contactanos</a>
                 </li>
             </ul>
         </div>

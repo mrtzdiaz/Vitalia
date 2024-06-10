@@ -1,10 +1,10 @@
-* {
+* {  /*tipo de letra*/
     font-family: "Didact Gothic", sans-serif;
     font-weight: 400; /*tipografia*/
     font-style: normal;
   }
   
-  body {
+  body {   /*color y margen de body*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
   }
 
   /* FOOTER */
-.contenedor-footer {
+.contenedor-footer {/**/
   background-color: #143027;
   color: white;
   padding: 25px;
@@ -37,33 +37,33 @@
   width: 100%;
 }
 
-.footer-primera-fila {
+.footer-primera-fila {  /**/
   padding: 20px;
   color: white;
 }
 
-.footer-segunda-fila {
+.footer-segunda-fila {  /**/
   justify-content: space-around;
   align-items: center;
 }
 
-.contenedor-iconos {
+.contenedor-iconos {  /**/
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.bi {
+.bi {     /**/
   margin: 10px;
   font-size: 1.4rem;
   color: white;
 }
 
-.nav-footer a {
+.nav-footer a {  /**/
   text-decoration: none;
   color: white;
   margin-right: 10px;
 }
-.hablemos {
+.hablemos {        /**/
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -131,4 +131,8 @@
   .contenedor-iconos .bi {
     font-size: 1rem;
   }
+}
+
+.active{
+  color: #ff6b6b !important;
 }

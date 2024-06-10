@@ -1,27 +1,9 @@
-.nav-item.active {
-  background-color: #4CAF50; /* Cambia a tu color preferido */
-}
-
-* {
-  font-family: "Didact Gothic", sans-serif;
-  font-weight: 400; /*tipografia*/
-  font-style: normal;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
-  margin: 0;
-}
-
 .wallpaper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-image: url(/img/wallpaper.jpg);
+  background-image: url(../public/img/wallpaper.jpg);
 }
 
 .wallpaper h1 {
@@ -122,20 +104,32 @@ body {
   font-size: 15px;
 }
 
+
+.fa-linkedin{
+  font-size: 24px;
+            color:  #0077b5;
+            margin: 10px;
+}
+
+.fa-github{
+  font-size: 24px;
+            color:  #333;
+            margin: 10px;
+}
 /* FORMA DE CONTACTO */
 .forma {
   margin: auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .color-text {
   color: #1A936F;
 }
 
-#mensaje {
+#message {
   height: 100%;
   opacity: 70%;
 }
@@ -143,45 +137,7 @@ body {
 .btn-vitalia {
   margin-top: 4%;
 }
-/* FOOTER */
-.contenedor-footer {
-  background-color: #143027;
-  color: white;
-  padding: 25px;
-  margin: 0;
-  width: 100%;
-}
 
-.footer-primera-fila {
-  padding: 20px;
-  color: white;
-}
-
-.footer-segunda-fila {
-  justify-content: space-around;
-  align-items: center;
-}
-
-.contenedor-iconos {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.bi {
-  margin: 10px;
-  font-size: 1.4rem;
-  color: white;
-}
-
-.nav-footer a {
-  text-decoration: none;
-  color: white;
-  margin-right: 10px;
-}
-.hablemos {
-  font-weight: bold;
-  font-size: 1.3rem;
-}
 
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
@@ -264,50 +220,13 @@ body {
   .footer-primera-fila p,
   .footer-segunda-fila p,
   .nav-footer a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .contenedor-iconos .bi {
     font-size: 1rem;
   }
 }
-
-.fa-linkedin{
-  text-align: center;
-    margin-top: 20px;
-    color: #0073b1;
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.3s;
+.active{
+  color: #ff6b6b !important;
 }
-
-.fa-github{
-  text-align: center;
-    margin-top: 20px;
-    color: #333;
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.3s;
-}
-
-/*PRODUCTOS*/
-  h2{
-    text-align: center;
-    padding: 10px;
-    color: #143027;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-
-  .card img{
-    width: 100px;
-    height: 300px;
-  }
-
-/*   .wallpaperProductos{
-      display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  background-image: url(/img/natural\ 1.png);
-
-  } */

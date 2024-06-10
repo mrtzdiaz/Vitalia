@@ -1,3 +1,19 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navItem = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function () {
+            // Remove 'active' class from all items
+            navItem.forEach(el => el.classList.remove('active'));
+            
+            // Add 'active' class to the clicked item
+            this.classList.add('active');
+        });
+    });
+});
+
+
 // VARIABLES
 let nombre = document.getElementById("from_name");
 let email = document.getElementById("user_email");

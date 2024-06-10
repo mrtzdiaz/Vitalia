@@ -1,3 +1,7 @@
+.nav-item.active {
+  background-color: #4CAF50; /* Cambia a tu color preferido */
+}
+
 * {
   font-family: "Didact Gothic", sans-serif;
   font-weight: 400; /*tipografia*/
@@ -117,6 +121,7 @@ body {
   width: 17em;
   font-size: 15px;
 }
+
 /* FORMA DE CONTACTO */
 .forma {
   margin: auto;
@@ -265,6 +270,24 @@ body {
   .contenedor-iconos .bi {
     font-size: 1rem;
   }
+}
+
+.fa-linkedin{
+  text-align: center;
+    margin-top: 20px;
+    color: #0073b1;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.fa-github{
+  text-align: center;
+    margin-top: 20px;
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
 }
 
 /*PRODUCTOS*/

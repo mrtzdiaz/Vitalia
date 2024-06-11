@@ -7,6 +7,10 @@
     .card-body {
       font-size: 1rem;
     }
+
+    .col {
+      flex: 1 1 calc(50% - 30px);
+  }
   
     .destacados {
       font-size: 1rem;
@@ -39,6 +43,10 @@
     .card-body {
       font-size: 1rem;
     }
+
+    .col {
+      flex: 1 1 25%;
+  }
   
     .destacados {
       font-size: 1rem;

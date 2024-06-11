@@ -28,7 +28,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                     <a class="nav-link " style="color: white;" href="../html/nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " style="color: white;" href="../html/contactanos.html">Contactanos</a>
+                    <a class="nav-link " style="color: white;" href="../html/contactanos.html">Contáctanos</a>
                 </li>
             </ul>
         </div>

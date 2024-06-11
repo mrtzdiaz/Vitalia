@@ -18,7 +18,7 @@ let footerHTML = `<div class="contenedor-footer mt-5">
                             <p class="hablemos">Hablemos!</p>
                             <p class="parrafo-hablemos">Si tienes alguna pregunta específica sobre nosotros, nuestros
                                 productos o nuestras ubicaciones, no dudes
-                                en ponerte en contacto con nosotros a través de nuestras redes sociales. También puedes
+                                en ponerte en contacto a través de nuestras redes sociales. También puedes
                                 hacer clic en el siguiente <a href="../html/contactanos.html" style="color: #FF6B6B;">enlace</a> para enviarnos un correo electrónico. <br> Estamos aquí para ayudarte y esperamos con
                                 interés escucharte pronto.</p>
                         </div>

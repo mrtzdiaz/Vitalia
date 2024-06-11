@@ -1,3 +1,28 @@
+.nav-item.active {
+  background-color: #4CAF50; /* Cambia a tu color preferido */
+}
+
+* {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400; /*tipografia*/
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+.wallpaper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-image: url(/img/wallpaper.jpg);
+}
 
 .wallpaper h1 {
   font-size: 300%;
@@ -82,6 +107,68 @@
   width: 17em;
   font-size: 15px;
 }
+
+/* FORMA DE CONTACTO */
+.forma {
+  margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-text {
+  color: #1A936F;
+}
+
+#mensaje {
+  height: 100%;
+  opacity: 70%;
+}
+
+.btn-vitalia {
+  margin-top: 4%;
+}
+/* FOOTER */
+.contenedor-footer {
+  background-color: #143027;
+  color: white;
+  padding: 25px;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-primera-fila {
+  padding: 20px;
+  color: white;
+}
+
+.footer-segunda-fila {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor-iconos {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bi {
+  margin: 10px;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+.hablemos {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   .navbar-nav .nav-item {
@@ -169,6 +256,24 @@
   .contenedor-iconos .bi {
     font-size: 1rem;
   }
+}
+
+.fa-linkedin{
+  text-align: center;
+    margin-top: 20px;
+    color: #0073b1;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.fa-github{
+  text-align: center;
+    margin-top: 20px;
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
 }
 
 /*PRODUCTOS*/

@@ -7,10 +7,10 @@ let footerHTML = `<div class="contenedor-footer mt-5">
                             <!-- <i class="bi bi-facebook"></i> -->
                             <img class="logo-footer" src="../public/img/VITALIALOGO.svg" alt="Vitalia" width="200">
                             <div class="contenedor-iconos mt-3">
-                                <a id="facebook" href=""><i class="bi bi-facebook"></i></a>
-                                <a id="instagram" href=""><i class="bi bi-instagram"></i></a>
-                                <a id="linkedin" href=""><i class="bi bi-linkedin"></i></a>
-                                <a href=""><i class="bi bi-youtube"></i></a>
+                               <a id="facebook" href="https://www.facebook.com" class="bi bi-facebook" target="_blank"></a> <!--Se modifican links-->
+                                <a id="instagram" href="https://www.instagram.com" class="bi bi-instagram" target="_blank"></a>
+                                <a id="linkedin" href="https://www.linkedin.com" class="bi bi-linkedin" target="_blank"></a>
+                                <a id= "youtube" href="https://www.youtube.com" class="bi bi-youtube" target="_blank"></a>
                             </div>
                             <p>Contacto <br> vitalia.soporte@gmail.com</p>
                         </div>

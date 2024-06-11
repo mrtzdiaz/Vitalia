@@ -103,6 +103,19 @@
   width: 17em;
   font-size: 15px;
 }
+
+
+.fa-linkedin{
+  font-size: 24px;
+            color:  #0077b5;
+            margin: 10px;
+}
+
+.fa-github{
+  font-size: 24px;
+            color:  #333;
+            margin: 10px;
+}
 /* FORMA DE CONTACTO */
 .forma {
   margin: auto;

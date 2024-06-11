@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
-    <link rel="stylesheet" href="nosotros.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nosotros.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+</head>
 <body>
     <main>
         <!-- SECCION DE NAVBAR -->
@@ -30,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="/img/acerca-de-vitalia.jpg" class="img-fluid" alt="Plantas medicinales" />
+                        <img src="../public/img/acerca-de-vitalia.jpg" class="img-fluid" alt="Plantas medicinales" />
                     </div>
                     <div class="col-md-6 text-center"><br><br>
                         <h2 class="color-text">Acerca de Vitalia</h2>
@@ -50,7 +51,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/daniel.jpeg" alt="Daniel" />
+                        <img src="../public/img/daniel.jpeg" alt="Daniel" />
                         <div class="info">
                             <h3>Daniel Díaz</h3>
                             <p>Desarrollador Java Full Stack Jr</p>
@@ -69,7 +70,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/vero.jpeg" alt="Vero" />
+                        <img src="../public/img/vero.jpeg" alt="Vero" />
                         <div class="info">
                             <h3>Veronica Bedolla</h3>
                             <p>Desarrolladora Java Full Stack Jr</p>
@@ -87,7 +88,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/brandon.jpeg" alt="Brandon" />
+                        <img src="../public/img/brandon.jpeg" alt="Brandon" />
                         <div class="info">
                             <h3>Brandon Bazan</h3>
                             <p>Desarrollador Java Full Stack Jr</p>
@@ -104,7 +105,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/Dania.jpeg" alt="Diana" />
+                        <img src="../public/img/Dania.jpeg" alt="Diana" />
                         <div class="info">
                             <h3>Dania Cornejo</h3>
                             <p>Desarrolladora Java Full Stack Jr</p>
@@ -123,7 +124,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/diego.jpeg" alt="Diego" />
+                        <img src="../public/img/diego.jpeg" alt="Diego" />
                         <div class="info">
                             <h3>Diego Hernández</h3>
                             <p>Desarrollador Java Full Stack Jr</p>
@@ -140,7 +141,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/sofia.jpeg" alt="Sofia" />
+                        <img src="../public/img/sofia.jpeg" alt="Sofia" />
                         <div class="info">
                             <h3>Sofia Rojas</h3>
                             <p>Desarrolladora Java Full Stack Jr</p>
@@ -157,7 +158,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/jesus.jpeg" alt="Jesús" />
+                        <img src="../public/img/jesus.jpeg" alt="Jesús" />
                         <div class="info">
                             <h3>Jesús Hernández</h3>
                             <p>Desarrollador Java Full Stack Jr</p>
@@ -175,7 +176,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/img/rebeca.jpeg" alt="Rebeca" />
+                        <img src="../public/img/rebeca.jpeg" alt="Rebeca" />
                         <div class="info">
                             <h3>Rebeca Jiménez</h3>
                             <p>Desarrolladora Java Full Stack Jr</p>
@@ -191,94 +192,16 @@
                 </div>
             </div>
             </div>
-        </section>
-        <!-- FORMA DE CONTACTO -->
-        <section class="w-100 m-auto forma">
-            <div class="col-md-6 container-fluid text-center">
-                <h2 class="color-text">Ponte en Contacto</h2>
-                <p>Si tienes alguna pregunta específica sobre nosotros, nuestros productos o nuestras ubicaciones, no
-                    dudes
-                    en ponerte en contacto con nosotros a través de nuestras redes sociales. Estamos aquí para ayudarte
-                    y esperamos con interés escucharte pronto.</p>
-            </div>
-            <div class="forma  w-100 m-auto" style="max-width: 900px;">
-                <form class="row g-3" id="form">
-                    <div id="alert-container" class="container"></div>
-                    <div class="alert alert-danger fade show" style="display:none;" role="alert"
-                            id="alertValidaciones">
-                            <p id="alertValidacionesTexto"></p>
-                        </div>
-                    <div class="col-md-6">
-                        <label for="from_name" class="form-label">Nombre</label>
-                        <input name="from_name" type="text" class="form-control" id="from_name" placeholder="vitalia">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="user_email" class="form-label">Correo electrónico</label>
-                        <input name="user_email"  type="email" class="form-control" id="user_email"
-                            placeholder="vitalia.soporte@gmail.com">
-                    </div>
-                    <div class="col-12">
-                        <label for="user_cel" class="form-label">Teléfono</label>
-                        <input name="user_cel" type="number" class="form-control" id="user_cel" placeholder="55.12.34.56.78">
-                    </div>
-                    <div class="col-12">
-                        <label for="message" class="form-label">Mensaje</label>
-                        <input name="message" type="text" class="form-control" id="message" placeholder="Hola!">
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" id="btn" class="btn btn-vitalia btn-success">Enviar</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+        </section> 
         <!-- SECCION FOOTER -->
         <footer>
-            <div class="contenedor-footer mt-5">
-                <div class="container-fluid">
-                    <div class="row footer-primera-fila">
-                        <div class="col-12 col-md-6  footer-izquierda text-center text-md-start">
-                            <!-- <i class="bi bi-facebook"></i> -->
-                            <img class="logo-footer" src="/img/VITALIALOGO.svg" alt="Vitalia" width="200">
-                            <div class="contenedor-iconos mt-3">
-                                <a id="facebook" href=""><i class="bi bi-facebook"></i></a>
-                                <a id="instagram" href=""><i class="bi bi-instagram"></i></a>
-                                <a id="linkedin" href=""><i class="bi bi-linkedin"></i></a>
-                                <a href=""><i class="bi bi-youtube"></i></a>
-                            </div>
-                            <p>Contacto <br> vitalia.soporte@gmail.com</p>
-                        </div>
-                        <div class="col-12 col-md-6 mt-4 mt-md-0 text-center">
-                            <p class="hablemos">Hablemos!</p>
-                            <p class="parrafo-hablemos">Si tienes alguna pregunta específica sobre nosotros, nuestros
-                                productos o nuestras ubicaciones, no dudes
-                                en ponerte en contacto con nosotros a través de nuestras redes sociales. También puedes
-                                hacer clic en el siguiente
-                                enlace para enviarnos un correo electrónico. Estamos aquí para ayudarte y esperamos con
-                                interés escucharte pronto.</p>
-                        </div>
-                    </div>
-
-                    <div class="row footer-segunda-fila mt-4">
-                        <hr>
-                        <div
-                            class="col-12 col-md-7 nav-footer d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center">
-                            <a href="#">Inicio</a>
-                            <a href="#">Productos</a>
-                            <a href="#">Carrito</a>
-                            <a href="#">Nosotros</a>
-                        </div>
-                        <div class="col-12 col-md-5 text-center text-md-end mt-4 mt-md-0">
-                            <p>Únete a nuestra comunidad en redes sociales! Vitalia, siempre presente.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </footer>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+<<<<<<< HEAD:nosotros/nosotros.html
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script type="text/javascript">
@@ -287,6 +210,10 @@
 
     <script src="js/nosotros.js" defer></script>
     <script src="/js/navbar.js"></script>
+=======
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+>>>>>>> c287ed985d9deb9d90884e0667d075244d25333f:html/nosotros.html
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 let footer = document.getElementsByTagName("footer");
 
-let footerHTML = `<div class="contenedor-footer mt-5">
+let footerHTML = `<div class="contenedor-footer">
                 <div class="container-fluid">
                     <div class="row footer-primera-fila">
                         <div class="col-12 col-md-6  footer-izquierda text-center text-md-start">

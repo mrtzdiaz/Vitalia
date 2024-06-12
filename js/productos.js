@@ -2,7 +2,7 @@ let mainContainer = document.getElementById("mainProducts");
 let carrusel1 = document.getElementById("carruselUno");
 let carrusel2 = document.getElementById("carruselDos");
 let carrusel3 = document.getElementById("carruselTres");
-
+let navPage = document.querySelectorAll(".nums-li a");
 
 let productoPrincipales = [
     {'name':"Bebida de soya en polvo (500 gr)", 'img':"bebida.webp", 'description':"Proteína aislada de soya, suero de leche deslactosada, dextrosa, lecitina de soya, Vitamina A (retinol), Vitamina D (calciferol), Vitamina C (ácido ascórbico), y sabor capuchino descafeinado.", 'price':"$350.00"},
@@ -30,9 +30,13 @@ function addItem(item, continer){
         continer.insertAdjacentHTML("beforeend",
             `<div class="col">
               <div class="card">
-                <img src="/public/img/${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
+              <div class="card-img">
+              <img src="/public/img/${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
+              </div>
                 <div class="card-body">
-                  <h5 class="card-title">${element.name}</h5>
+                <div class="card-title">
+                <h5 class="title">${element.name}</h5>
+                </div>
                   <h5 id="rate">
                   <strong>5.0</strong>
                   <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
@@ -42,13 +46,21 @@ function addItem(item, continer){
                   <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
                   </h5>
                   <h3>${element.price}</h3>
-                  <button type="button" class="btn btn-outline-primary mx-auto d-block" disabled>¡Lo quiero!</button>
+                  <button type="button" class="btn mx-auto d-block"><strong>¡Lo quiero!</button>
                 </div>
               </div>
             </div>`)
         
     });
 }
+
+navPage.forEach((item) => {
+    item.addEventListener("click",function(){
+        navPage.forEach((item) => {item.classList.remove("actived")});
+        this.classList.add('actived');
+    })
+})
+
 
 addItem(productoPrincipales, mainContainer);
 addItem(productosVarios.slice(0,3), carrusel1);

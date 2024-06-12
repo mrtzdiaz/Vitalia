@@ -1,79 +1,118 @@
-.nav-item.active {
-  background-color: #4CAF50; /* Cambia a tu color preferido */
-}
-.wallpaper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  background-image: url(/img/wallpaper.jpg);
-}
-
-.wallpaper h1 {
-  font-size: 300%;
-  color: white;
-  text-shadow: #ff6b6b 4px 4px;
-}
-/* FORMA DE CONTACTO */
-.forma {
-  margin: auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.color-text {
-  color: #1A936F;
-}
-
-#mensaje {
-  height: 100%;
-  opacity: 70%;
-}
-
-.btn-vitalia {
-  margin-top: 4%;
-}
-
-.fa-linkedin{
-  text-align: center;
-    margin-top: 20px;
-    color: #0073b1;
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.3s;
-}
-
-.fa-github{
-  text-align: center;
-    margin-top: 20px;
-    color: #333;
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.3s;
+* {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400; /*tipografia*/
+  font-style: normal;
 }
 
 /*PRODUCTOS*/
-  h2{
+
+  .container-title{
+    margin: 12px 0px;
+  }
+
+  .container-title h2{
     text-align: center;
     padding: 10px;
     color: #143027;
+    font-weight: bolder;
+    text-shadow: #1A936F 1px 1px;
   }
+
+  /* ----------------------Estilos para cards responsivas---------------------- */
+
+  .card-img{
+    width: 300px;
+    height: 300px;
+  }  
 
   .card img{
-    width: 200px;
-    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 
-  .active{
-    color: #ff6b6b !important;
+  .card-title{
+    height: 50px;
+    max-height: 50px;
+    overflow: hidden;
   }
-  
-/* parte responsiva de carrousel*/
-.carousel-item {
+
+    /* ----------------------Estilos para botones en las cards---------------------- */
+
+
+  .card button{
+    width: 50%;
+    border-color: #ff6b6b;
+    color: white;
+    background-color: #ff6b6b;
+  }
+
+  .card button:hover{
+    border-color: #ff6b6b;
+    background-color: white;
+    color: #ff6b6b;
+  }
+
+  .card button:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #ff6b6b;
+    background-color: white;
+    color: #ff6b6b;
+  }
+
+  @media (min-width: 992px){
+    #mainProducts button{
+      width: 70%;
+    }
+  }
+
+
+    /* ----------------------Estilos para barra de navegación de productos---------------------- */
+
+  .navProducts nav{
+    height: 40px;
+  }
+
+  .navProducts a{
+    font-weight: bold;
+    color: #1A936F;
+  }
+
+  .navProducts{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagination:hover a{
+    color: #1A936F;
+  }
+
+  .pagination .actived{
+  background-color: #1A936F; 
+  border-color: #1A936F; 
+  color: white;
+  }
+
+  .pagination:hover .actived{
+    background-color: #1A936F; 
+    border-color: #1A936F; 
+    color: white;
+  }
+
+  .pagination:focus .actived{
+    background-color: #1A936F; 
+    border-color: #1A936F; 
+    color: white;
+  }
+
+  /* ----------------------Estilos para carrusel de navegación de productos responsivo ---------------------- */
+  .carousel-item {
   max-height: 600px; 
   object-fit: cover; 
+  overflow-y: scroll;
 }
 .carousel-inner {
     border-radius: 10px; 

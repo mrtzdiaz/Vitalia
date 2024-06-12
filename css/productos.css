@@ -12,6 +12,8 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
+  /* ----------------------Estilos para cards responsivas---------------------- */
+
   .card-img{
     width: 300px;
     height: 300px;
@@ -27,4 +29,75 @@
     height: 50px;
     max-height: 50px;
     overflow: hidden;
+  }
+
+    /* ----------------------Estilos para botones en las cards---------------------- */
+
+
+  .card button{
+    width: 50%;
+    border-color: #ff6b6b;
+    color: white;
+    background-color: #ff6b6b;
+  }
+
+  .card button:hover{
+    border-color: #ff6b6b;
+    background-color: white;
+    color: #ff6b6b;
+  }
+
+  .card button:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #ff6b6b;
+    background-color: white;
+    color: #ff6b6b;
+  }
+
+  @media (min-width: 992px){
+    #mainProducts button{
+      width: 70%;
+    }
+  }
+
+
+    /* ----------------------Estilos para barra de navegación de productos---------------------- */
+
+  .navProducts nav{
+    height: 40px;
+  }
+
+  .navProducts a{
+    font-weight: bold;
+    color: #1A936F;
+  }
+
+  .navProducts{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagination:hover a{
+    color: #1A936F;
+  }
+
+  .pagination .actived{
+  background-color: #1A936F; 
+  border-color: #1A936F; 
+  color: white;
+  }
+
+  .pagination:hover .actived{
+    background-color: #1A936F; 
+    border-color: #1A936F; 
+    color: white;
+  }
+
+  .pagination:focus .actived{
+    background-color: #1A936F; 
+    border-color: #1A936F; 
+    color: white;
   }

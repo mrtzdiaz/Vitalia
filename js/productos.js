@@ -39,7 +39,7 @@ function addItem(item, continer){
                   <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
                   </h5>
                   <h3>${element.price}</h3>
-                  <button type="button" class="btn btn-outline-primary mx-auto d-block" disabled>¡Lo quiero!</button>
+                  <button type="button" class="btn mx-auto d-block"><strong>¡Lo quiero!</button>
                 </div>
               </div>
             </div>`)

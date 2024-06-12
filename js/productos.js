@@ -23,9 +23,13 @@ function addItem(item, continer){
         continer.insertAdjacentHTML("beforeend",
             `<div class="col">
               <div class="card">
-                <img src="/public/img/${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
+              <div class="card-img">
+              <img src="/public/img/${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
+              </div>
                 <div class="card-body">
-                  <h5 class="card-title">${element.name}</h5>
+                <div class="card-title">
+                <h5 class="title">${element.name}</h5>
+                </div>
                   <h5 id="rate">
                   <strong>5.0</strong>
                   <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>

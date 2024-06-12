@@ -1,6 +1,8 @@
 let mainContainer = document.getElementById("mainProducts");
 let carrusel1 = document.getElementById("carruselUno");
-
+let carrusel2 = document.getElementById("carruselDos");
+let carrusel3 = document.getElementById("carruselTres");
+let navPage = document.querySelectorAll(".nums-li a");
 
 let productoPrincipales = [
     {'name':"Bebida de soya en polvo (500 gr)", 'img':"bebida.webp", 'description':"Proteína aislada de soya, suero de leche deslactosada, dextrosa, lecitina de soya, Vitamina A (retinol), Vitamina D (calciferol), Vitamina C (ácido ascórbico), y sabor capuchino descafeinado.", 'price':"$350.00"},
@@ -14,9 +16,14 @@ let productosVarios = [
     {'name':"Jarabe Broncolin Etiqueta Azul Mezcla de Plantas (250 ml)", 'img':"jarabe azul.webp", 'description':"Para el alivio de los sintomas del resfriado comun y tos.", 'price':"$214.00"},
     {'name':"Jarabe Eucalín Mezla de plantas y propóleo (240 ml)", 'img':"jarabe.webp", 'description':"Auxiliar en el tratamiento de Tos, Flemas, Resfriado Común o Tos de Fumador.", 'price':"$100.00"},
     {'name':"Shampoo Anticaída Romero y Sábila Árbol Verde (500 ml)", 'img':"shampoo.webp", 'description':"Shampoo natural Anticaída combate la caída y estimula el crecimiento de tu cabello con ingredientes naturales como la Sábila, espinosillo, ortiguilla, romero, coparche y cáscara de nogal; promoviendo un cabello sano y fuerte.", 'price':"$410.00"},
+    {'name':"Eucalipto jarabe (140 ml)", 'img':"Eucalipto.jpg", 'description':"Eucaliptine funciona como un auxiliar en el tratamiento de la tos seca y tos con flemas, así como en el alivio de la garganta irritada", 'price':"$410.00"},
+    {'name':"Proteina vegetal (450 gr)", 'img':"fibravegetal.jpeg", 'description':"Proteína vegetal en polvo sabor chocolate a base de chícharo y arroz, adicionado con enzimas y probióticos que ayudan a una buena salud digestiva", 'price':"$300.00"},
+    {'name':"Chia mia té negro (350 ml)", 'img':"Chiatenegro.png", 'description':"Un té real para amantes de lo natural. Infusionado con hojas de té real, sin azúcares añadidos ni saborizantes y 100% natural.", 'price':"$80.00"},
     {'name':"Té Verde en polvo (300 gr)", 'img':"te-verde.jpg", 'description':"#", 'price':"$220.00"},
     {'name':"Jarabe Eucalín Infantil Mezla de plantas y propóleo (240 ml)", 'img':"jarabeniño.webp", 'description':"Auxiliar en el tratamiento de Tos y Flemas", 'price':"$80.00"}
-];
+    
+
+  ];
 
 function addItem(item, continer){
     item.forEach(element => {
@@ -47,5 +54,15 @@ function addItem(item, continer){
     });
 }
 
+navPage.forEach((item) => {
+    item.addEventListener("click",function(){
+        navPage.forEach((item) => {item.classList.remove("actived")});
+        this.classList.add('actived');
+    })
+})
+
+
 addItem(productoPrincipales, mainContainer);
-addItem(productosVarios, carrusel1);
+addItem(productosVarios.slice(0,3), carrusel1);
+addItem(productosVarios.slice(3,6), carrusel2);
+addItem(productosVarios.slice(6,9), carrusel3);

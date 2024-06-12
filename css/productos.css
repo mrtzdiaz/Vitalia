@@ -72,7 +72,7 @@
   
 /* parte responsiva de carrousel*/
 .carousel-item {
-  max-height: 500px; 
+  max-height: 600px; 
   object-fit: cover; 
 }
 .carousel-inner {

@@ -21,11 +21,9 @@ let productosVarios = [
     {'name':"Chia mia té negro (350 ml)", 'img':"Chiatenegro.png", 'description':"Un té real para amantes de lo natural. Infusionado con hojas de té real, sin azúcares añadidos ni saborizantes y 100% natural.", 'price':"$80.00"},
     {'name':"Té Verde en polvo (300 gr)", 'img':"te-verde.jpg", 'description':"#", 'price':"$220.00"},
     {'name':"Jarabe Eucalín Infantil Mezla de plantas y propóleo (240 ml)", 'img':"jarabeniño.webp", 'description':"Auxiliar en el tratamiento de Tos y Flemas", 'price':"$80.00"}
-    
-
   ];
 
-function addItem(item, continer){
+ function addItem(item, continer){
     item.forEach(element => {
         continer.insertAdjacentHTML("beforeend",
             `<div class="col">

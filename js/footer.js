@@ -5,7 +5,7 @@ let footerHTML = `<div class="contenedor-footer">
                     <div class="row footer-primera-fila">
                         <div class="col-12 col-md-6  footer-izquierda text-center text-md-start">
                             <!-- <i class="bi bi-facebook"></i> -->
-                            <img class="logo-footer" src="../public/img/VITALIALOGO.svg" alt="Vitalia" width="200">
+                            <img class="logo-footer" src="../public/img/VITALIA LOGO.png" alt="Vitalia" width="200">
                             <div class="contenedor-iconos mt-3">
                                <a id="facebook" href="https://www.facebook.com" class="bi bi-facebook" target="_blank"></a> <!--Se modifican links-->
                                 <a id="instagram" href="https://www.instagram.com" class="bi bi-instagram" target="_blank"></a>

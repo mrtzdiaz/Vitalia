@@ -4,8 +4,8 @@ let header = document.getElementsByTagName('header');
 
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
 <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <img src="../public/img/VITALIALOGO.svg" alt="VITALIA" width="200">
+    <a class="navbar-brand mx-3" href="../index.html">
+        <img src="../public/img/VITALIA LOGO.png" alt="VITALIA" width="200">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

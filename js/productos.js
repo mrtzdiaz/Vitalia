@@ -4,6 +4,11 @@ let carrusel2 = document.getElementById("carruselDos");
 let carrusel3 = document.getElementById("carruselTres");
 let navPage = document.querySelectorAll(".nums-li a");
 
+// arreglo que se lla productos principales
+
+//cada elemento del arrego es un OBJETO y cada objeto tiene 4 llaves (name, img, descripcion, price)
+
+
 let productoPrincipales = [
     {'name':"Bebida de soya en polvo (500 gr)", 'img':"bebida.webp", 'description':"Proteína aislada de soya, suero de leche deslactosada, dextrosa, lecitina de soya, Vitamina A (retinol), Vitamina D (calciferol), Vitamina C (ácido ascórbico), y sabor capuchino descafeinado.", 'price':"$350.00"},
     {'name':"Colágeno Hidrolizado (120 Tab.)", 'img':"colageno.webp", 'description':"Dentro de los beneficios del colágeno hidrolizado se encuentra la función como agente reparador del tejido colectivo del cuerpo, es por ello que este fármaco ha sido utilizado como tratamiento de algunas enfermedades relacionadas, como en osteoartritis y osteoporosis, ambas estrechamente ligadas a los huesos.", 'price':"$360.00"},
@@ -24,8 +29,11 @@ let productosVarios = [
     
 
   ];
+// la funciona recibe el arreglo y el contenedor donde se van a insertar el codigo html
 
+// la funcion tiene un foreach donde se itera o recorre cada uno de los elementos del arraglo (que son objetos) y se toman el name img y price para mostrarlos 
 function addItem(item, continer){
+  
     item.forEach(element => {
         continer.insertAdjacentHTML("beforeend",
             `<div class="col">

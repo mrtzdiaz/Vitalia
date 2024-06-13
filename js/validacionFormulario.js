@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     const navItem = document.querySelectorAll('.nav-item');
 
     navItems.forEach(item => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
-});
+}); */
 
 
 // VARIABLES

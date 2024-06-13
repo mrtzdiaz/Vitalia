@@ -1,0 +1,79 @@
+ /* FORMA DE CONTACTO */
+  .forma {
+    margin: auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .color-text {
+    color: #1A936F;
+  }
+  
+  #message {
+    height: 100%;
+    opacity: 70%;
+  }
+  
+  .btn-vitalia {
+    margin-top: 4%;
+  }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-brand img {
+      width: 150px;
+    }
+    .footer-primera-fila p,
+    .footer-segunda-fila p,
+    .nav-footer a {
+      font-size: 0.9rem;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-nav .nav-item {
+      font-size: 1rem;
+    }
+  
+    .navbar-brand img {
+      width: 120px;
+    }
+  
+    .acercade p {
+      font-size: 1rem;
+    }
+  
+    .flip-card {
+      width: 95%;
+      height: 250px;
+    }
+  
+    .flip-card-front img {
+      height: 160px;
+    }
+  
+    .hablemos {
+      font-size: 1rem;
+    }
+  
+    .parrafo-hablemos {
+      font-size: 0.8rem;
+    }
+    .contenedor-iconos .bi {
+      font-size: 1rem;
+    }
+  }
+  
+    .active{
+      color: #ff6b6b !important;
+    }

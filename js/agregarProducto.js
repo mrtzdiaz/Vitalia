@@ -4,8 +4,8 @@ let descripcion = document.getElementById("description");
 let btnAgregar = document.getElementById("btn");
 let carrusel1 = document.getElementById("prueba");
 
-function addItem(item, container){
-  item.forEach(element => {
+function addItem(items, container){
+  items.forEach(element => {
       container.insertAdjacentHTML("beforeend",
           `<div class="col">
             <div class="card">
@@ -34,11 +34,27 @@ function addItem(item, container){
 }
 
 
+function agregarProductoLocalStorage(producto, nombreVariable){
+
+  let productosLocalStorage = localStorage.getItem(nombreVariable);
+  let arrayProductos = JSON.parse(productosLocalStorage) // pasar un texto a un json
+
+  arrayProductos.push(producto);
+
+  localStorage.setItem(nombreVariable, JSON.stringify(arrayProductos)); // JSON.stringify pasa un json a un texto
+
+}
+
 btnAgregar.addEventListener("click", function(event){
     let nuevosProductos = [];
     event.preventDefault();
-    nuevosProductos.push({'name':`${nombre.value}`, 'img':"Fibravegetal.jpeg", 'description':`${descripcion.value}`, 'price':`${precio.value}`})
+    let productoNuevo = {'name':`${nombre.value}`, 'img':"Fibravegetal.jpeg", 'description':`${descripcion.value}`, 'price':`${precio.value}`}
+
+    nuevosProductos.push(productoNuevo)
     
+    agregarProductoLocalStorage(productoNuevo, 'productosPrincipales')
+
     addItem(nuevosProductos, carrusel1)
     console.log(nuevosProductos);
 })
+

@@ -97,8 +97,11 @@ function addItem(item, container){
   });
 }
 
+// se lee de localstorage la variable productosprincipales y se convierte en formato JSON
+const arrayProductosPrincipales = JSON.parse(localStorage.getItem('productosPrincipales')) // pasar un texto a un json
 
-addItem(productoPrincipales, mainContainer);
+
+addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 
 addItem(productosVarios.slice(0,3), carrusel1);
 addItem(productosVarios.slice(3,6), carrusel2);
 addItem(productosVarios.slice(6,9), carrusel3);

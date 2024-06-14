@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     const navItem = document.querySelectorAll('.nav-item');
 
     navItems.forEach(item => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
-});
+}); */
 
 
 // VARIABLES
@@ -29,7 +29,7 @@ const btnCorreo = document.getElementById('button');
 
 // VALIDACIONES NOMBRE
 function validacionNombre() {
-    let re = RegExp(/([^\s]\s?){3,40}/);
+    let re = RegExp(/([^\s\d]\s?){3,40}/);
     if (!re.test(nombre.value)) {
         alerta.innerHTML += `El <strong>Nombre</strong> no es correcto.<br>`;
         alerta.style.display = "block";

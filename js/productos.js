@@ -68,34 +68,34 @@ navPage.forEach((item) => {
     })
 })
 
-function addItem(item, container){
-  item.forEach(element => {
-      container.insertAdjacentHTML("beforeend",
-          `<div class="col">
-            <div class="card">
-            <div class="card-img">
-            <img src="${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
-            </div>
-              <div class="card-body">
-              <div class="card-title">
-              <h5 class="title">${element.name}</h5>
-              </div>
-                <h5 id="rate">
-                <strong>5.0</strong>
-                <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
-                <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
-                <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
-                <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
-                <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
-                </h5>
-                <h3>${element.price}</h3>
-                <button type="button" class="btn mx-auto d-block"><strong>¡Lo quiero!</button>
-              </div>
-            </div>
-          </div>`)
+// function addItem(item, container){
+//   item.forEach(element => {
+//       container.insertAdjacentHTML("beforeend",
+//           `<div class="col">
+//             <div class="card">
+//             <div class="card-img">
+//             <img src="${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
+//             </div>
+//               <div class="card-body">
+//               <div class="card-title">
+//               <h5 class="title">${element.name}</h5>
+//               </div>
+//                 <h5 id="rate">
+//                 <strong>5.0</strong>
+//                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
+//                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
+//                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
+//                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
+//                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
+//                 </h5>
+//                 <h3>${element.price}</h3>
+//                 <button type="button" class="btn mx-auto d-block"><strong>¡Lo quiero!</button>
+//               </div>
+//             </div>
+//           </div>`)
       
-  });
-}
+//   });
+// }
 
 // se lee de localstorage la variable productosprincipales y se convierte en formato JSON
 const arrayProductosPrincipales = JSON.parse(localStorage.getItem('productosPrincipales')) // pasar un texto a un json

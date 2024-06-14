@@ -1,8 +1,11 @@
 let nombre = document.getElementById("from_name");
 let precio = document.getElementById("from_price");
-let descripcion = document.getElementById("description");
+let descripcion = document.getElementById("description")
 let btnAgregar = document.getElementById("btn");
 let carrusel1 = document.getElementById("prueba");
+let alerta = document.getElementById("alertValidaciones");
+
+
 
 function addItem(items, container){
   items.forEach(element => {
@@ -34,6 +37,7 @@ function addItem(items, container){
 }
 
 
+// funcion para agregar productos a localstorage
 function agregarProductoLocalStorage(producto, nombreVariable){
 
   let productosLocalStorage = localStorage.getItem(nombreVariable);
@@ -45,16 +49,77 @@ function agregarProductoLocalStorage(producto, nombreVariable){
 
 }
 
+
+function validacionNombre(elemento) {
+
+  let re = RegExp(/([^\s\d]\s?){3,40}/);
+  if (!re.test(elemento.value)) {
+      alerta.innerHTML += `El <strong>Nombre</strong> no es correcto.<br>`;
+      alerta.style.display = "block";
+      elemento.style.border = "solid red medium";
+      return false
+  }
+  return true
+};
+
+function validacionDescripcion(elemento) {
+
+  let re = RegExp(/([^\s\d]\s?){10,400}/);
+  if (!re.test(elemento.value)) {
+      alerta.innerHTML += `<strong>Descripcion</strong> No tiene descripcion.<br>`;
+      alerta.style.display = "block";
+      elemento.style.border = "solid red medium";
+      return false
+  }
+  return true
+};
+
+function validacionPrecio(elemento) {
+  let re = RegExp(/^\d+(\.\d{1,2})?$/);
+  if (!re.test(elemento.value) || parseFloat(elemento.value) <= 0) {
+      alerta.innerHTML += `<strong>Precio</strong> no es correcto. Debe ser un número positivo con hasta dos decimales.<br>`;
+      alerta.style.display = "block";
+      elemento.style.border = "solid red medium";
+      return false;
+  }
+  return true;
+};
+
 btnAgregar.addEventListener("click", function(event){
     let nuevosProductos = [];
     event.preventDefault();
-    let productoNuevo = {'name':`${nombre.value}`, 'img':"Fibravegetal.jpeg", 'description':`${descripcion.value}`, 'price':`${precio.value}`}
+    alerta.innerHTML = ""
 
-    nuevosProductos.push(productoNuevo)
+    const nombreCorrecto = validacionNombre(nombre)
+    const descripcionCorrecta = validacionDescripcion(descripcion)
+    const precioCorrecto = validacionPrecio(precio)
     
-    agregarProductoLocalStorage(productoNuevo, 'productosPrincipales')
+    
+    if (nombreCorrecto)
+      nombre.style.border = "solid #dee2e6 medium";
 
-    addItem(nuevosProductos, carrusel1)
-    console.log(nuevosProductos);
+    if (descripcionCorrecta)
+      descripcion.style.border = "solid #dee2e6 medium";
+
+    if (precioCorrecto)
+      precio.style.border = "solid #dee2e6 medium";
+
+    if (nombreCorrecto && descripcionCorrecta && precioCorrecto){
+      alerta.style.display = "none";
+
+
+      let productoNuevo = {'name':`${nombre.value}`, 'img':"Fibravegetal.jpeg", 'description':`${descripcion.value}`, 'price':`${precio.value}`}
+      nuevosProductos.push(productoNuevo)
+      
+      agregarProductoLocalStorage(productoNuevo, 'productosPrincipales')
+      addItem(nuevosProductos, carrusel1)
+      console.log(nuevosProductos);
+
+      nombre.value = ""
+      descripcion.value = ""
+      precio.value = ""
+    
+    }
+    
 })
 

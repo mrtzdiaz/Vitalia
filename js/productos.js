@@ -10,13 +10,6 @@ let navPage = document.querySelectorAll(".nums-li a");
 //cada elemento del arrego es un OBJETO y cada objeto tiene 4 llaves (name, img, descripcion, price)
 
 
-let productoPrincipales = [
-    {'name':"Bebida de soya en polvo (500 gr)", 'img':"bebida.webp", 'description':"Proteína aislada de soya, suero de leche deslactosada, dextrosa, lecitina de soya, Vitamina A (retinol), Vitamina D (calciferol), Vitamina C (ácido ascórbico), y sabor capuchino descafeinado.", 'price':"$350.00"},
-    {'name':"Colágeno Hidrolizado (120 Tab.)", 'img':"colageno.webp", 'description':"Dentro de los beneficios del colágeno hidrolizado se encuentra la función como agente reparador del tejido colectivo del cuerpo, es por ello que este fármaco ha sido utilizado como tratamiento de algunas enfermedades relacionadas, como en osteoartritis y osteoporosis, ambas estrechamente ligadas a los huesos.", 'price':"$360.00"},
-    {'name':"Esencia Floral Calma (25 ml)", 'img':"esenciales.webp", 'description':"Esencia natural extraída de la Flor de acebo, el castaño dulce y la genciana. Es una alternativa natural para acompañar tus estados de ánimo. Es seguro tanto para niños mayores de 7 años como para adultos.", 'price':"$180.00"},
-    {'name':"Esencia Floral Echinacea (25 ml)", 'img':"image011.webp", 'description':"Esencia natural extraída de flores silvestres, una alternativa natural para mejorar la calidad de vida.La planta se ha utilizado para curar heridas, abscesos, quemaduras, eczema y úlceras, para tratar el resfriado común y como carminativo, antiinflamatorio, antibacteriano, antifúngico, antiviral e inmunoestimulante.", 'price':"$80.00"}
-];
-
 let productosVarios = [
     {'name':"Castaño De Indias (60 Cap.)", 'img':"indias.webp", 'description':"Auxiliar en problemas de varices, ulceras varicosas, trombosis y hemorroides", 'price':"$198.00"},
     {'name':"Jarabe Broncolin Etiqueta Azul Mezcla de Plantas (250 ml)", 'img':"jarabe azul.webp", 'description':"Para el alivio de los sintomas del resfriado comun y tos.", 'price':"$214.00"},

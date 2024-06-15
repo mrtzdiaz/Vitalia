@@ -40,6 +40,7 @@
   perspective: 1000px; /* Ajusta la perspectiva del flip card */
   margin-bottom: 20px; /* Espacio entre las tarjetas */
   margin: 20px 20px;
+  
 }
 .flip-card-inner {
   position: relative;
@@ -49,6 +50,7 @@
   transition: transform 0.9s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(184, 58, 58, 0.2);
+
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -76,7 +78,9 @@
   align-items: center;
   justify-content: center;
   font-style: oblique;
-  font-size: 22px;
+  font-size: 20px;
+  overflow: auto; /*se agrega overflow para evitar que se expanda el texto fuera del div*/
+
 }
 .flip-card-front img {
   display: flex;

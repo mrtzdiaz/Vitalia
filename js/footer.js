@@ -15,7 +15,7 @@ let footerHTML = `<div class="contenedor-footer">
                             <p>Contacto <br> vitalia.soporte@gmail.com</p>
                         </div>
                         <div class="col-12 col-md-6 mt-4 mt-md-0 text-center">
-                            <p class="hablemos">Hablemos!</p>
+                            <p class="hablemos">¡Hablemos!</p>
                             <p class="parrafo-hablemos">Si tienes alguna pregunta específica sobre nosotros, nuestros
                                 productos o nuestras ubicaciones, no dudes
                                 en ponerte en contacto a través de nuestras redes sociales. También puedes
@@ -33,9 +33,11 @@ let footerHTML = `<div class="contenedor-footer">
                             <a href="../html/carrito.html">Carrito</a>
                             <a href="../html/nosotros.html">Nosotros</a>
                             <a href="../html/contactanos.html">Contactanos</a>
+                            <a href="../html/agregar_productos.html">Agregar producto</a> 
+
                         </div>
                         <div class="col-12 col-md-5 text-center text-md-end mt-4 mt-md-0">
-                            <p>Únete a nuestra comunidad en redes sociales! Vitalia, siempre presente.</p>
+                            <p>¡Únete a nuestra comunidad en redes sociales! Vitalia, siempre presente.</p>
                         </div>
                     </div>
                 </div>

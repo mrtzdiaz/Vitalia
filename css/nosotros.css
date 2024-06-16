@@ -29,18 +29,19 @@
 .contenedor {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around; /* Ajusta la distribución para más equilibrio */
   width: 100%;
-  height: 300%;
+  gap: 20px; /* Ajusta el espacio entre tarjetas */
 }
+
 .flip-card {
   background-color: transparent;
   width: 22%;
   height: 500px;
-  perspective: 1000px; /* Ajusta la perspectiva del flip card */
-  margin-bottom: 20px; /* Espacio entre las tarjetas */
-  margin: 20px 20px;
+  perspective: 1000px;
+  margin-bottom: 20px;
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -50,9 +51,11 @@
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(184, 58, 58, 0.2);
 }
+
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -60,6 +63,7 @@
   height: 100%;
   backface-visibility: hidden;
 }
+
 .flip-card-front {
   background-color: #ccdbdc;
   display: flex;
@@ -67,6 +71,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .flip-card-back {
   background-color: #ccdbdc;
   color: rgb(43, 39, 39);
@@ -76,8 +81,10 @@
   align-items: center;
   justify-content: center;
   font-style: oblique;
-  font-size: 22px;
+  font-size: 20px;
+  overflow: auto;
 }
+
 .flip-card-front img {
   display: flex;
   justify-content: center;
@@ -85,7 +92,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-bottom: 1em; /* Espacio entre la foto y la información */
+  margin-bottom: 1em;
 }
 
 .flip-card img {
@@ -98,24 +105,39 @@
   font-style: italic;
   text-align: center;
 }
+
 .resumen {
   height: 18em;
   width: 17em;
   font-size: 15px;
 }
 
-
-.fa-linkedin{
+.fa-linkedin {
   font-size: 24px;
-            color:  #0077b5;
-            margin: 10px;
+  color: #0077b5;
+  margin: 10px;
 }
 
-.fa-github{
+.fa-github {
   font-size: 24px;
-            color:  #333;
-            margin: 10px;
+  color: #333;
+  margin: 10px;
 }
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 45%; /* Ajusta el ancho para pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: 10px 0; /* Reduce el margen superior e inferior */
+  }
+}
+
 /* FORMA DE CONTACTO */
 .forma {
   margin: auto;
@@ -153,15 +175,6 @@
     font-size: 1rem;
   }
 
-  .flip-card {
-    width: 37%;
-    height: 500px;
-  }
-
-  .flip-card-front img {
-    height: 100px;
-    width: auto;
-  }
 
   .resumen {
     font-size: 0.9rem;

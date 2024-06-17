@@ -1,5 +1,26 @@
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
+
+  /* INICIO RESPONSIVO CARRUSEL INDEX */
+  .card-img-overlay{
+    margin: 1em;
+    .card-img-overlay ,h1,p{
+      color: #e1e9e9;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      
+      }
+      .card-img-overlay ,h1{
+      font-size: 2em;
+  
+      }
+      .card-img-overlay ,p{
+      font-size: 1em;
+      
+    }
+/* FIN RESPONSIVO  CARRUSEL INDEX */
+
     .bienvenido {
       font-size: 1rem;
     }
@@ -33,9 +54,33 @@
     .contenedor-iconos .bi {
       font-size: 1.2rem;
     }
+
   }
   
   @media (max-width: 576px) {
+
+    /* INICIO RESPONSIVO CARRUSEL INDEX */
+    .card-img-overlay{
+      margin: 1em;
+      .card-img-overlay ,h1,p{
+        color: #e1e9e9;
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+        
+      }
+      .card-img-overlay ,h1{
+        font-size: 1em;
+    
+      }
+      .card-img-overlay ,p{
+        font-size: 0.5em;
+        
+      }
+    }
+    /* FIN RESPONSIVO  CARRUSEL INDEX */
+
+
     .bienvenido {
       font-size: 1rem;
     }
@@ -74,3 +119,4 @@
   .active{
     color: #ff6b6b !important;
   }
+}

@@ -4,6 +4,7 @@ let carrusel1 = document.getElementById("carruselUno");
 let carrusel2 = document.getElementById("carruselDos");
 let carrusel3 = document.getElementById("carruselTres");
 let navPage = document.querySelectorAll(".nums-li a");
+let controlPage = document.querySelectorAll(".control-li a");
 
 // arreglo que se lla productos principales
 
@@ -26,14 +27,38 @@ let productosVarios = [
     {'name':"Té Verde en polvo (300 gr)", 'img':"/public/img/te-verde.jpg", 'description':"#", 'price':"$220.00"},
     {'name':"Jarabe Eucalín Infantil Mezla de plantas y propóleo (240 ml)", 'img':"/public/img/jarabeniño.webp", 'description':"Auxiliar en el tratamiento de Tos y Flemas", 'price':"$80.00"}
   ];
-// la funciona recibe el arreglo y el contenedor donde se van a insertar el codigo html
 
 navPage.forEach((item) => {
     item.addEventListener("click",function(){
         navPage.forEach((item) => {item.classList.remove("actived")});
         this.classList.add('actived');
-    })
-})
+    });
+});
+
+controlPage.forEach((item) => {
+  item.addEventListener("click",function(){
+      let activo = document.querySelector(".nums-li .actived");
+      let pagActiva = parseInt(activo.textContent) - 1;
+      let boton = item.textContent;
+      activo.classList.remove("actived");
+      if(boton == "Siguiente"){
+        try{
+          navPage.item(pagActiva+1).classList.add('actived');
+        }
+        catch(e){
+          navPage.item(0).classList.add('actived');
+        }
+      }
+      else{
+        try{
+          navPage.item(pagActiva-1).classList.add('actived');
+        }
+        catch(e){
+          navPage.item(navPage.length-1).classList.add('actived');
+        }
+      }
+  });
+});
 
 function addItem(item, container){
   item.forEach(element => {
@@ -41,7 +66,7 @@ function addItem(item, container){
           `<div class="col">
             <div class="card">
             <div class="card-img">
-            <img src="${element.img}" class="mx-auto d-block" alt="Aceites esenciales">
+            <img src="${element.img}" class="mx-auto d-block" alt="Producto">
             </div>
               <div class="card-body">
               <div class="card-title">
@@ -64,11 +89,10 @@ function addItem(item, container){
   });
 }
 
+const arrayProductosPrincipales = JSON.parse(localStorage.getItem('productosPrincipales')); // pasar un texto a un json
 // se lee de localstorage la variable productosprincipales y se convierte en formato JSON
-const arrayProductosPrincipales = JSON.parse(localStorage.getItem('productosPrincipales')) // pasar un texto a un json
 
-
-addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 
 addItem(productosVarios.slice(0,3), carrusel1);
 addItem(productosVarios.slice(3,6), carrusel2);
 addItem(productosVarios.slice(6,9), carrusel3);
+addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 

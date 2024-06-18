@@ -104,11 +104,11 @@
   }
 
   /* ----------------------Estilos para carrusel de navegación de productos responsivo ---------------------- */
-  .carousel-item {
+  .carousel-up {
   max-height: 600px; 
   object-fit: cover; 
-  overflow-y: scroll;
 }
+
 .carousel-inner {
     border-radius: 10px; 
     overflow: hidden; 

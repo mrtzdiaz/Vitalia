@@ -1,3 +1,9 @@
+* {  /*tipo de letra*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  }
+
 .wallpaper {
   display: flex;
   justify-content: center;
@@ -23,6 +29,7 @@
 
 .acercade p {
   text-align: justify;
+  font-size: 1.2em;
 }
 
 /* TARJETAS */

@@ -27,16 +27,16 @@ let footerHTML = `<div class="contenedor-footer">
                     <div class="row footer-segunda-fila mt-4">
                         <hr>
                         <div
-                            class="col-12 col-md-7 nav-footer d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center">
+                            class="col-12 col-lg-7 text-center nav-footer d-flex flex-column flex-md-row justify-content-center justify-content-md-center align-items-center">
                             <a href="../index.html">Inicio</a>
                             <a href="../html/productos.html">Productos</a>
                             <a href="../html/carrito.html">Carrito</a>
                             <a href="../html/nosotros.html">Nosotros</a>
-                            <a href="../html/contactanos.html">Contactanos</a>
+                            <a href="../html/contactanos.html">Contáctanos</a>
                             <a href="../html/agregar_productos.html">Agregar producto</a> 
 
                         </div>
-                        <div class="col-12 col-md-5 text-center text-md-end mt-4 mt-md-0">
+                        <div class="col-12 col-lg-5 text-center  text-lg-end mt-4 mt-md-0">
                             <p>¡Únete a nuestra comunidad en redes sociales! Vitalia, siempre presente.</p>
                         </div>
                     </div>

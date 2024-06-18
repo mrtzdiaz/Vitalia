@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/registro.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/public/img/vitalia corazon.png" type="imagenicon" />
+  </head>
+  <body>
+    <main>
+      <!-- SECCION DE NAVBAR -->
+      <header class="sticky-top"></header>
+
+      <!-- FORMA DE CONTACTO -->
+      <section class="w-100 m-auto forma">
+        <div class="container-fluid text-center mb-3">
+          <h2 class="color-text">Registro</h2>
+        </div>
+        <div class="form-container">
+          <div class="form-image col-12 col-md-6">
+            <img
+              src="/public/img/registro.png"
+              alt="Imagen de plantas con el logo de Vitalia"
+            />
+          </div>
+          <div class="form-content">
+            <form class="row g-3" id="form">
+              <!-- ALERTA -->
+              <div id="alert-container" class="container"></div>
+              <div
+                class="alert alert-danger fade show"
+                style="display: none"
+                role="alert"
+                id="alertValidaciones"
+              >
+                <p id="alertValidacionesTexto"></p>
+              </div>
+              <!-- FORMA -->
+              <div class="col-12">
+                <label for="from_name" class="form-label">Nombre</label>
+                <input
+                  name="from_name"
+                  type="text"
+                  class="form-control"
+                  id="from_name"
+                  placeholder="Nombre"
+                />
+              </div>
+              <div class="col-12">
+                <label for="from_lastname" class="form-label">Apellidos</label>
+                <input
+                  name="from_lastname"
+                  type="text"
+                  class="form-control"
+                  id="from_lastname"
+                  placeholder="Apellidos"
+                />
+              </div>
+              <div class="col-12">
+                <label for="from_email" class="form-label"
+                  >Correo Electrónico</label
+                >
+                <input
+                  name="from_email"
+                  type="email"
+                  class="form-control"
+                  id="from_email"
+                  placeholder="Correo Electrónico"
+                />
+              </div>
+              <div class="col-12">
+                <label for="from_password" class="form-label"
+                  >Crear Contraseña</label
+                >
+                <input
+                  name="from_password"
+                  type="password"
+                  class="form-control"
+                  id="from_password"
+                />
+              </div>
+              <div class="col-12">
+                <label for="from_confirm_password" class="form-label"
+                  >Confirma Contraseña</label
+                >
+                <input
+                  name="from_confirm_password"
+                  type="password"
+                  class="form-control"
+                  id="from_confirm_password"
+                />
+              </div>
+              <div class="col-12">
+                <button
+                  type="submit"
+                  id="btn"
+                  class="btn d-grid gap-2 col-6 mx-auto btn-success"
+                >
+                  REGÍSTRATE
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCION FOOTER -->
+      <footer></footer>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/footer.js" defer></script>
+    <script src="/js/validacionRegistro.js" type="text/javascript"></script>
+  </body>
+</html>

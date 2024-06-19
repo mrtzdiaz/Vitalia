@@ -1,5 +1,5 @@
 /* MEDIA QUERIES */
-@media (max-width: 967px) {
+@media (max-width: 1024px) {
 
   /* INICIO RESPONSIVO CARRUSEL INDEX */
   .card-img-overlay{
@@ -87,7 +87,7 @@
         font-size: 0.8em;
     }
       .card-img-overlay,button{
-        width: 30%;
+        width: 25%;
         height: 20%;
       }
     }

@@ -1,6 +1,6 @@
 let header = document.getElementsByTagName('header');
 
-
+let usuario = JSON.parse(localStorage.getItem("usuario"));
 
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
 <div class="container-fluid">
@@ -17,6 +17,9 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" style="color: white;" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " style="color: white;" href="../html/registro.html">Registro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="color: white;" href="../html/productos.html">Productos</a>
@@ -38,6 +41,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                     aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"
                     style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>
+                <h3 class="mx-2" style="color: white;"> ${usuario != null ? 'Hola '+ usuario.name.toUpperCase() : ""} </h3>
         </form>
     </div>
 </div>

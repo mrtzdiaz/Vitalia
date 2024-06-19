@@ -19,7 +19,7 @@ let btnCarga = document.getElementById("upload_widget");
 let alerta = document.getElementById("alertValidaciones");
 
 
-// funcion para agregar productos a localstorage
+// Función para agregar productos a localstorage
 function agregarProductoLocalStorage(producto, nombreVariable) {
 
   let productosLocalStorage = localStorage.getItem(nombreVariable);
@@ -30,7 +30,7 @@ function agregarProductoLocalStorage(producto, nombreVariable) {
   localStorage.setItem(nombreVariable, JSON.stringify(arrayProductos)); // JSON.stringify pasa un json a un texto
 
 }
-
+//Funcion alert
 function mostrarAlerta(mensaje, tipo) {
   const alerta = document.getElementById('alert-container');
   const alertaDiv = document.createElement('div');
@@ -43,7 +43,7 @@ function mostrarAlerta(mensaje, tipo) {
   alerta.appendChild(alertaDiv);
 };
 
-
+//----------Validaciones-----//
 function validacionNombre(elemento) {
   elemento.value = elemento.value.trim();
   let re = RegExp(/([^\s]\s?){5,40}/);
@@ -55,7 +55,6 @@ function validacionNombre(elemento) {
   }
   return true
 };
-
 
 function validacionPrecio(elemento) {
   elemento.value = elemento.value.trim();
@@ -92,7 +91,7 @@ function validacionImagen(elemento) {
   }
   return true
 };
-
+//-------- Evento Boton---------//
 btnAgregar.addEventListener("click", function (event) {
   event.preventDefault();
   let nuevosProductos = [];

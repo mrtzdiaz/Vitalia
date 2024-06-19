@@ -53,7 +53,7 @@ function validacionEmail() {
 
 // VALIDACIONES TELEFONO
 function validacionTelefono() {
-    let re = RegExp(/\d{10}/);
+    let re = RegExp(/^(?!.*(\d)\1{4})[2-9]\d{9}$/);
     if (!re.test(telefono.value)) {
         alerta.innerHTML += `El <strong>Número telefónico</strong> no es correcto.<br>`;
         alerta.style.display = "block";
@@ -63,6 +63,19 @@ function validacionTelefono() {
     }
     return true
 }
+// Eliminar caracteres que no son numeros
+document.getElementById('user_cel').addEventListener('input', function (e) {
+    const input = e.target;
+    const value = input.value;
+    const cleanedValue = value.replace(/[^0-9]/g, '');
+    input.value = cleanedValue;
+});
+// Permitir solo números
+document.getElementById('user_cel').addEventListener('keypress', function (e) {
+    if (!/[0-9]/.test(e.key)) {
+    e.preventDefault();
+    }
+});
 
 // VALIDACIONES CARACTERES MENSAJE
 function validacionMensaje() {

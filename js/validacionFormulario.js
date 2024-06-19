@@ -73,7 +73,7 @@ document.getElementById('user_cel').addEventListener('input', function (e) {
 // Permitir solo números
 document.getElementById('user_cel').addEventListener('keypress', function (e) {
     if (!/[0-9]/.test(e.key)) {
-    e.preventDefault();
+        e.preventDefault();
     }
 });
 
@@ -108,60 +108,61 @@ btn.addEventListener("click", function (event) {
     mensaje.style.border = "";
     isValid = true;
 
-    if(!validacionNombre()){
+    if (!validacionNombre()) {
         isValid = false;
     }
-    if(!validacionEmail()){
+    if (!validacionEmail()) {
         isValid = false;
     }
-    if(!validacionTelefono()){
+    if (!validacionTelefono()) {
         isValid = false;
     }
-    if(!validacionMensaje()){
+    if (!validacionMensaje()) {
         isValid = false;
     }
 
-    if(isValid){
+    if (isValid) {
         enviarCorreo();
     }
+
 });
 
 // EVENTO INPUT NOMBRE
-nombre.addEventListener("blur", function (event){
+nombre.addEventListener("blur", function (event) {
     event.preventDefault();
     nombre.value = nombre.value.trim();
     limpiarAlarma()
-    if(nombre.value.length > 0){
+    if (nombre.value.length > 0) {
         validacionNombre();
     }
 });
 
 // EVENTO INPUT EMAIL
-email.addEventListener("blur", function (event){
+email.addEventListener("blur", function (event) {
     event.preventDefault();
     email.value = email.value.trim();
     limpiarAlarma()
-    if(email.value.length > 0){
+    if (email.value.length > 0) {
         validacionEmail();
     }
 });
 
 // EVENTO INPUT TELEFONO
-telefono.addEventListener("blur", function (event){
+telefono.addEventListener("blur", function (event) {
     event.preventDefault();
     telefono.value = telefono.value.trim();
     limpiarAlarma()
-    if(telefono.value.length > 0){
+    if (telefono.value.length > 0) {
         validacionTelefono();
     }
 });
 
 // EVENTO INPUT MENSAJE
-mensaje.addEventListener("blur", function (event){
+mensaje.addEventListener("blur", function (event) {
     event.preventDefault();
     mensaje.value = mensaje.value.trim();
     limpiarAlarma()
-    if(mensaje.value.length > 0){
+    if (mensaje.value.length > 0) {
         validacionMensaje();
     }
 });
@@ -181,7 +182,7 @@ function mostrarAlerta(mensaje, tipo) {
 };
 
 //LIMPIAR ALARMA
-function limpiarAlarma(){
+function limpiarAlarma() {
     alerta.style.display = "none";
     alerta.innerHTML = "";
     nombre.style.border = "";
@@ -199,7 +200,11 @@ function enviarCorreo() {
     emailjs.sendForm(serviceID, templateID, form)
         .then(() => {
             btn.value = 'Enviar';
-            mostrarAlerta('Enviado!', 'success');
+            mostrarAlerta('¡Correo enviado! Pronto nos pondremos en contacto.', 'success');
+            nombre.value = "";
+            email.value = "";
+            telefono.value = "";
+            mensaje.value = "";
         }, (err) => {
             btn.value = 'Enviar';
             mostrarAlerta('Error: ' + JSON.stringify(err), 'danger');

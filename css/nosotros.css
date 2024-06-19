@@ -38,7 +38,7 @@
   flex-wrap: wrap;
   justify-content: space-around; /* Ajusta la distribución para más equilibrio */
   width: 100%;
-  gap: 20px; /* Ajusta el espacio entre tarjetas */
+  gap: 10px; /* Ajusta el espacio entre tarjetas */
 }
 
 .flip-card {
@@ -47,6 +47,7 @@
   height: 500px;
   perspective: 1000px;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .flip-card-inner {
@@ -85,7 +86,6 @@
   transform: rotateY(180deg);
   padding: 15px;
   display: flex;
-  align-items: center;
   justify-content: center;
   font-style: oblique;
   font-size: 20px;
@@ -116,9 +116,8 @@
 }
 
 .resumen {
-  height: 18em;
-  width: 17em;
-  font-size: 15px;
+  margin: auto;
+  font-size: 14px;
 }
 
 .fa-linkedin {
@@ -134,41 +133,30 @@
 }
 
 /* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .flip-card {
-    width: 45%; /* Ajusta el ancho para pantallas medianas */
+@media (max-width: 942px) {
+  .resumen {
+    font-size: 13px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
+  .flip-card {
+    width: 45%; /* Ajusta el ancho para pantallas medianas */
+  }
+  .resumen {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
   .flip-card {
     width: 100%; /* Ajusta el ancho para pantallas pequeñas */
     margin: 10px 0; /* Reduce el margen superior e inferior */
   }
+  .resumen {
+    font-size: 15px;
+  }
 }
-
-/* FORMA DE CONTACTO */
-.forma {
-  margin: auto;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.color-text {
-  color: #1A936F;
-}
-
-#message {
-  height: 100%;
-  opacity: 70%;
-}
-
-.btn-vitalia {
-  margin-top: 4%;
-}
-
 
 /* MEDIA QUERIES */
 @media (max-width: 868px) {
@@ -222,15 +210,6 @@
     font-size: 1rem;
   }
 
-  .flip-card {
-    width: 95%;
-    height: 450px;
-  }
-
-  .flip-card-front img {
-    height: 160px;
-  }
-
   .hablemos {
     font-size: 1rem;
   }
@@ -259,15 +238,6 @@
   
     .acercade p {
       font-size: 1rem;
-    }
-  
-    .flip-card {
-      width: 95%;
-      height: 421px;
-    }
-  
-    .flip-card-front img {
-      height: 160px;
     }
   
     .hablemos {

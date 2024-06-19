@@ -72,6 +72,10 @@
     font-size: 2em;
     
   }
+  .card-img-overlay ,a{
+    text-decoration: none;
+    color: white;
+}
 }
 
 /* FIN CARRUSEL INDEX */

@@ -108,8 +108,13 @@
   }
 
   /* ----------------------Estilos para carrusel de navegación de productos responsivo ---------------------- */
+<<<<<<< HEAD
   .carousel-up {
   max-height: 600px; 
+=======
+  .carousel-item {
+  max-height: 700px; 
+>>>>>>> jesus
   object-fit: cover; 
 }
 

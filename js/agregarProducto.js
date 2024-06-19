@@ -9,6 +9,7 @@ const myWidget = cloudinary.createUploadWidget(
   }
 );
 
+// se seleccionan los inputs del producto 
 let nombre = document.getElementById("from_name");
 let precio = document.getElementById("from_price");
 let descripcion = document.getElementById("description")
@@ -97,6 +98,7 @@ btnAgregar.addEventListener("click", function (event) {
   let nuevosProductos = [];
   alerta.innerHTML = ""
 
+
   const nombreCorrecto = validacionNombre(nombre);
   const descripcionCorrecta = validacionDescripcion(descripcion);
   const precioCorrecto = validacionPrecio(precio);
@@ -116,15 +118,18 @@ btnAgregar.addEventListener("click", function (event) {
     imagen.style.border = "solid #dee2e6 medium";
 
   if (nombreCorrecto && descripcionCorrecta && precioCorrecto && imagenCorrecta) {
-    alerta.style.display = "none";
+    alerta.style.display = "none"; // si pasa la validacion se oculta la alerta
 
 
+    // se crea un objeto con los datos del producto 
     let productoNuevo = { 'name': `${nombre.value}`, 'img': `${imagen.value}`, 'description': `${descripcion.value}`, 'price': `$${precio.value}` }
-    nuevosProductos.push(productoNuevo)
+    nuevosProductos.push(productoNuevo) // se agrega el producto al arraglo de nuevos productos 
 
-    agregarProductoLocalStorage(productoNuevo, 'productosPrincipales')
-    mostrarAlerta("¡Producto Agregado!","success");
+    agregarProductoLocalStorage(productoNuevo, 'productosPrincipales') // se creo una funcion para agregar el producto al local storage
+    mostrarAlerta("¡Producto Agregado!","success"); // se muestra la alerta de exitos
 
+
+    // se limpia el formulario para que se puede ingresar un nuevo producto 
     nombre.value = ""
     descripcion.value = ""
     precio.value = ""

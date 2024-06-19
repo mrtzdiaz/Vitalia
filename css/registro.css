@@ -1,0 +1,32 @@
+.forma {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .form-image {
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+  }
+  .form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .form-content {
+    flex: 1;
+    padding: 20px;
+  }

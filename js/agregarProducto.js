@@ -48,7 +48,7 @@ function validacionNombre(elemento) {
   elemento.value = elemento.value.trim();
   let re = RegExp(/([^\s]\s?){5,40}/);
   if (!re.test(elemento.value)) {
-    alerta.innerHTML += `El <strong>Nombre del producto</strong> no es correcto.<br>`;
+    alerta.innerHTML += `El <strong>nombre</strong> del producto no es correcto.<br>`;
     alerta.style.display = "block";
     elemento.style.border = "solid red medium";
     return false
@@ -60,7 +60,7 @@ function validacionPrecio(elemento) {
   elemento.value = elemento.value.trim();
   let re = RegExp(/^\d+(\.\d{1,2})?$/);
   if (!re.test(elemento.value) || parseFloat(elemento.value) <= 0) {
-    alerta.innerHTML += `<strong>Precio</strong> no es correcto. Debe ser un número positivo con hasta dos decimales.<br>`;
+    alerta.innerHTML += `El <strong>precio</strong> no es correcto. Debe ser un número positivo con hasta dos decimales.<br>`;
     alerta.style.display = "block";
     elemento.style.border = "solid red medium";
     return false;
@@ -72,7 +72,7 @@ function validacionDescripcion(elemento) {
   elemento.value = elemento.value.trim();
   let re = RegExp(/([^\s]\s?){20,200}/);
   if (!re.test(elemento.value)) {
-    alerta.innerHTML += `<strong>Descripcion</strong> La descripción del producto debe contener entre 20 y 200 caracteres.<br>`;
+    alerta.innerHTML += `La <strong>descripción</strong> del producto debe contener entre 20 y 200 caracteres.<br>`;
     alerta.style.display = "block";
     elemento.style.border = "solid red medium";
     return false
@@ -84,7 +84,7 @@ function validacionImagen(elemento) {
   let re = RegExp(/[\.png|\.jpg|\.jpeg|\.webp|\.svg]$/);
   console.log(elemento.value);
   if (!re.test(elemento.value)) {
-    alerta.innerHTML += `<strong>El archivo</strong> debe ser una imagen (png, jpg, jpeg, webp o svg).<br>`;
+    alerta.innerHTML += `El <strong>archivo</strong> debe ser una imagen (png, jpg, jpeg, webp o svg).<br>`;
     alerta.style.display = "block";
     elemento.style.border = "solid red medium";
     return false

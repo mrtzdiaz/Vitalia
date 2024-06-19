@@ -23,7 +23,7 @@ function validacionNombre() {
 
 // VALIDACIONES APELLIDO
 function validacionApellido() {
-    let re = RegExp( /^[A-Za-zÁÉÍÓÚÑáéíóúñ]+(?:[\s'-][A-Za-zÁÉÍÓÚÑáéíóúñ]+)*$/);
+    let re = RegExp(/^[A-Za-zÁÉÍÓÚÑáéíóúñ]+(?:[\s'-][A-Za-zÁÉÍÓÚÑáéíóúñ]+)*$/);
     if (!re.test(apellido.value)) {
         alerta.innerHTML += `El <strong>Apellido</strong> no es correcto.<br>`;
         alerta.style.display = "block";
@@ -50,7 +50,7 @@ function validacionContrasenas() {
     // Validar que la contraseña tiene una letra mayúscula, miníscula, un número y una longitud de 8 caracteres. 
     let re = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&]){8,15}/);
     if (!re.test(contrasena.value)) {
-        alerta.innerHTML += `La <strong>contraseña</strong> debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula, un numero y un caracter especial ($@$!%*?&)<br>`;
+        alerta.innerHTML += `La <strong>contraseña</strong> debe tener entre 8 y 15 caracteres, incluyendo una letra mayúscula, una letra minúscula, un numero y un caracter especial ($@$!%*?&)<br>`;
         alerta.style.display = "block";
         document.getElementById("from_password").style.border = "solid red medium";
         return false;
@@ -58,7 +58,7 @@ function validacionContrasenas() {
     return true;
 };
 
-function compararContrasenas(){
+function compararContrasenas() {
     if (contrasena.value !== confirmaContrasena.value) {
         alerta.innerHTML += `Las <strong>contraseñas</strong> no coinciden.<br>`;
         alerta.style.display = "block";
@@ -73,7 +73,7 @@ function compararContrasenas(){
 function agregarUsuarioLocalStorage(usuario, nombreVariable) {
 
     localStorage.setItem(nombreVariable, JSON.stringify(usuario)); // JSON.stringify pasa un json a un texto
-  }
+}
 
 /* ----------- EVENTOS DE LOS INPUTS Y BOTONES DE FORMULARIO ----------- */
 // EVENTO BOTON
@@ -88,88 +88,80 @@ btn.addEventListener("click", function (event) {
     confirmaContrasena.style.border = "";
     isValid = true;
 
-    if(!validacionNombre()){
-        isValid = false; 
-    }
-    if(!validacionApellido()){
+    if (!validacionNombre()) {
         isValid = false;
     }
-    if(!validacionEmail()){
+    if (!validacionApellido()) {
         isValid = false;
     }
-    if(!validacionContrasenas()){
+    if (!validacionEmail()) {
         isValid = false;
     }
-    if(!compararContrasenas()){
+    if (!validacionContrasenas()) {
+        isValid = false;
+    }
+    if (!compararContrasenas()) {
         isValid = false;
     }
 
-    console.log(
-        "validacionNombre", validacionNombre(), 
-        "validacionApellido", validacionApellido(), 
-        "validacionEmail", validacionEmail(), 
-        "validacionContrasenas", validacionContrasenas(), 
-        "compararContrasenas", compararContrasenas()
-    ) 
-    console.log("texto antes del if", isValid);
-    if(isValid){
-        console.log("dentro del if");
-      //  enviarCorreo();
-        console.log("desues de enviar correo");
-
-        let usuarioNuevo = { 'name': `${nombre.value}`, 'lastName': `${apellido.value}`, 'email': `${email.value}`, 'password': `$${contrasena.value}`}
-        console.log(usuarioNuevo);
+    if (isValid) {
+        let usuarioNuevo = { 'name': `${nombre.value}`, 'lastName': `${apellido.value}`, 'email': `${email.value}`, 'password': `${contrasena.value}` }
         agregarUsuarioLocalStorage(usuarioNuevo, 'usuario')
-        mostrarAlerta("¡Registro creado exitosamente!","success");
+        mostrarAlerta("¡Registro creado exitosamente!", "success");
+        nombre.value = "";
+        apellido.value = "";
+        email.value = "";
+        contrasena.value = "";
+        confirmaContrasena.value = "";
     }
 });
 
 // EVENTO INPUT NOMBRE
-nombre.addEventListener("blur", function (event){
+nombre.addEventListener("blur", function (event) {
     event.preventDefault();
     nombre.value = nombre.value.trim();
     limpiarAlarma()
-    if(nombre.value.length > 0){
+    if (nombre.value.length > 0) {
         validacionNombre();
     }
 });
 
 // EVENTO INPUT APELLIDO
-apellido.addEventListener("blur", function (event){
+apellido.addEventListener("blur", function (event) {
     event.preventDefault();
     apellido.value = apellido.value.trim();
     limpiarAlarma()
-    if(apellido.value.length > 0){
+    if (apellido.value.length > 0) {
         validacionApellido();
     }
 });
 
 // EVENTO INPUT EMAIL
-email.addEventListener("blur", function (event){
+email.addEventListener("blur", function (event) {
     event.preventDefault();
     email.value = email.value.trim();
     limpiarAlarma()
-    if(email.value.length > 0){
+    if (email.value.length > 0) {
         validacionEmail();
     }
 });
 
 // EVENTO INPUT CONTRASEÑA
-contrasena.addEventListener("blur", function (event){
+contrasena.addEventListener("blur", function (event) {
     event.preventDefault();
     contrasena.value = contrasena.value.trim();
     limpiarAlarma()
-    if(contrasena.value.length > 0){
+    if (contrasena.value.length > 0) {
         validacionContrasenas();
     }
 });
 
 // EVENTO INPUT CONFIRMA CONTRASEÑA
-confirmaContrasena.addEventListener("blur", function (event){
+confirmaContrasena.addEventListener("blur", function (event) {
     event.preventDefault();
     confirmaContrasena.value = confirmaContrasena.value.trim();
     limpiarAlarma()
-    if(confirmaContrasena.value.length > 0){
+    if (confirmaContrasena.value.length > 0) {
         validacionContrasenas();
     }
 });
@@ -189,7 +181,7 @@ function mostrarAlerta(mensaje, tipo) {
 };
 
 //LIMPIAR ALARMA
-function limpiarAlarma(){
+function limpiarAlarma() {
     alerta.style.display = "none";
     alerta.innerHTML = "";
     nombre.style.border = "";
@@ -197,20 +189,4 @@ function limpiarAlarma(){
     email.style.border = "";
     contrasena.style.border = "";
     confirmaContrasena.style.border = "";
-};
-
-//REGISTRO
-function enviarCorreo() {
-    btn.value = 'Enviando...';
-    const serviceID = 'default_service';
-    const templateID = 'template_ynzt6oh';
-
-    email.sendForm(serviceID, templateID, form)
-        .then(() => {
-            btn.value = 'Enviar';
-            mostrarAlerta('Tu registro ha sido exitoso!', 'success');
-        }, (err) => {
-            btn.value = 'Enviar';
-            mostrarAlerta('Error: ' + JSON.stringify(err), 'danger');
-        });
 };

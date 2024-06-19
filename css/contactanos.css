@@ -1,0 +1,79 @@
+* {  /*tipo de letra*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  }
+  /* Encabezado contacto */
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-image: url(/public/img/encabezado.png);
+  }
+  
+  .wrap h1 {
+    font-size: 300%;
+    color: rgb(255, 255, 255);
+    text-shadow: #ff6b6b 4px 4px;
+  }
+
+
+  /* FORMA DE CONTACTO */
+  .forma {
+    margin: auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .color-text {
+    color: #1A936F;
+  }
+  
+  #message {
+    height: 100%;
+    opacity: 70%;
+  }
+  
+  .btn-vitalia {
+    margin-top: 4%;
+  }
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-brand img {
+      width: 150px;
+    }
+    .footer-primera-fila p,
+    .footer-segunda-fila p,
+    .nav-footer a {
+      font-size: 0.9rem;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-nav .nav-item {
+      font-size: 1rem;
+    }
+  
+    .navbar-brand img {
+      width: 120px;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1rem;
+    }
+  }
+  
+    .active{
+      color: #ff6b6b !important;
+    }

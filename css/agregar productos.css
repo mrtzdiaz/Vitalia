@@ -1,0 +1,81 @@
+* {  /*tipo de letra*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  }
+ 
+ 
+ /* FORMA DE CONTACTO */
+  .forma {
+    margin: auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #agregar_producto {
+    margin-top: 4%;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #1A936F;
+    background-color: #1A936F;
+  }
+
+  #agregar_producto:hover{
+    color: #1A936F;
+    font-weight: bold;
+    border: 1px solid rgb(217, 217, 217);
+    background-color: white;
+  }
+
+  #upload_widget:hover{
+    color: #1A936F;
+    font-weight: bold;
+    border: 1px solid rgb(217, 217, 217);
+    background-color: white;
+  }
+
+  #upload_widget{
+    color: white;
+    font-weight: bold;
+    border: 1px solid #1A936F;
+    background-color: #1A936F;
+  }
+
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-brand img {
+      width: 150px;
+    }
+    .footer-primera-fila p,
+    .footer-segunda-fila p,
+    .nav-footer a {
+      font-size: 0.9rem;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-nav .nav-item {
+      font-size: 1rem;
+    }
+  
+    .navbar-brand img {
+      width: 120px;
+    }
+  
+    .parrafo-hablemos {
+      font-size: 0.8rem;
+    }
+    .contenedor-iconos .bi {
+      font-size: 1rem;
+    }
+  }

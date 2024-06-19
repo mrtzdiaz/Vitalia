@@ -1,0 +1,82 @@
+* {  /*tipo de letra*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  }
+  
+  .color-text {
+    color: #1A936F;
+  }
+
+  /* FOOTER */
+.contenedor-footer {/**/
+  background-color: #143027;
+  color: white;
+  padding: 25px;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-primera-fila {  /**/
+  padding: 20px;
+  color: white;
+}
+
+.footer-segunda-fila {  /**/
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor-iconos {  /**/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bi {     /**/
+  margin: 10px;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.nav-footer a {  /**/
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+.hablemos {        /**/
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.active{
+  color: #ff6b6b !important;
+}
+
+
+/* INICIO CARRUSEL INDEX */
+.card-img-overlay{
+  margin: 3em;
+  .card-img-overlay ,h1,p{
+    color: #e1e9e9;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      text-shadow: 1px 3px 2px black;
+  }
+  .card-img-overlay ,h1{
+    font-size: 5em;
+    
+
+  }
+  .card-img-overlay ,p{
+    font-size: 2em;
+    
+  }
+  .card-img-overlay ,a{
+    text-decoration: none;
+    color: white;
+}
+}
+
+/* FIN CARRUSEL INDEX */
+

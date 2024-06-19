@@ -1,0 +1,295 @@
+* {  /*tipo de letra*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  }
+
+.wallpaper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-image: url(../public/img/wallpaper.jpg);
+}
+
+.wallpaper h1 {
+  font-size: 300%;
+  color: white;
+  text-shadow: #ff6b6b 4px 4px;
+}
+
+/* ACERCA DE */
+.acercade {
+  margin: 20px;
+}
+
+.acercade img {
+  border-radius: 10px;
+}
+
+.acercade p {
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+/* TARJETAS */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ajusta la distribución para más equilibrio */
+  width: 100%;
+  gap: 20px; /* Ajusta el espacio entre tarjetas */
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 22%;
+  height: 500px;
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(184, 58, 58, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #ccdbdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background-color: #ccdbdc;
+  color: rgb(43, 39, 39);
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: oblique;
+  font-size: 20px;
+  overflow: auto;
+}
+
+.flip-card-front img {
+  position: relative; /* se modificó valor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px; /* se modificó valor */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.flip-card img {
+  width: 100%;
+  height: auto; /* se modificó valor */
+  margin: 15px;
+}
+
+.info {
+  font-style: italic;
+  text-align: center;
+}
+
+.resumen {
+  height: 18em;
+  width: 17em;
+  font-size: 15px;
+}
+
+.fa-linkedin {
+  font-size: 24px;
+  color: #0077b5;
+  margin: 10px;
+}
+
+.fa-github {
+  font-size: 24px;
+  color: #333;
+  margin: 10px;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 45%; /* Ajusta el ancho para pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: 10px 0; /* Reduce el margen superior e inferior */
+  }
+}
+
+/* FORMA DE CONTACTO */
+.forma {
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-text {
+  color: #1A936F;
+}
+
+#message {
+  height: 100%;
+  opacity: 70%;
+}
+
+.btn-vitalia {
+  margin-top: 4%;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 868px) {
+  .navbar-nav .nav-item {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand img {
+    width: 150px;
+  }
+
+  .acercade p {
+    font-size: 1rem;
+  }
+
+
+  .resumen {
+    font-size: 0.9rem;
+    padding-top: 25px;
+  }
+
+  .hablemos {
+    font-size: 1.1rem;
+  }
+
+  .parrafo-hablemos {
+    font-size: 0.9rem;
+  }
+
+  .footer-primera-fila p,
+  .footer-segunda-fila p,
+  .nav-footer a {
+    font-size: 0.9rem;
+  }
+
+  .contenedor-iconos .bi {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .navbar-nav .nav-item {
+    font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 120px;
+  }
+
+  .acercade p {
+    font-size: 1rem;
+  }
+
+  .flip-card {
+    width: 95%;
+    height: 450px;
+  }
+
+  .flip-card-front img {
+    height: 160px;
+  }
+
+  .hablemos {
+    font-size: 1rem;
+  }
+
+  .parrafo-hablemos {
+    font-size: 0.8rem;
+  }
+
+  .footer-primera-fila p,
+  .footer-segunda-fila p,
+  .nav-footer a {
+    font-size: 0.9rem;
+  }
+
+  .contenedor-iconos .bi {
+    font-size: 1rem;
+  }
+  @media (max-width: 476px) {
+    .navbar-nav .nav-item {
+      font-size: 1rem;
+    }
+  
+    .navbar-brand img {
+      width: 120px;
+    }
+  
+    .acercade p {
+      font-size: 1rem;
+    }
+  
+    .flip-card {
+      width: 95%;
+      height: 421px;
+    }
+  
+    .flip-card-front img {
+      height: 160px;
+    }
+  
+    .hablemos {
+      font-size: 1rem;
+    }
+  
+    .parrafo-hablemos {
+      font-size: 0.8rem;
+    }
+  
+    .footer-primera-fila p,
+    .footer-segunda-fila p,
+    .nav-footer a {
+      font-size: 0.9rem;
+    }
+  
+    .contenedor-iconos .bi {
+      font-size: 1rem;
+    }
+  }
+}
+
+.active{
+  color: #ff6b6b !important;
+}

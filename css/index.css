@@ -1,5 +1,5 @@
 /* MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 967px) {
 
   /* INICIO RESPONSIVO CARRUSEL INDEX */
   .card-img-overlay{
@@ -16,8 +16,12 @@
   
       }
       .card-img-overlay ,p{
-      font-size: 1em;
-      
+      font-size: 1.5em;
+      }
+      .card-img-overlay ,a{
+        text-decoration: none;
+        color: white;
+    }
     }
 /* FIN RESPONSIVO  CARRUSEL INDEX */
 
@@ -57,7 +61,7 @@
 
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 700px) {
 
     /* INICIO RESPONSIVO CARRUSEL INDEX */
     .card-img-overlay{
@@ -74,8 +78,17 @@
     
       }
       .card-img-overlay ,p{
-        font-size: 0.5em;
+        font-size: 0.7em;
         
+      }
+      .card-img-overlay ,a{
+        text-decoration: none;
+        color: white;
+        font-size: 0.8em;
+    }
+      .card-img-overlay,button{
+        width: 30%;
+        height: 20%;
       }
     }
     /* FIN RESPONSIVO  CARRUSEL INDEX */
@@ -119,4 +132,3 @@
   .active{
     color: #ff6b6b !important;
   }
-}

@@ -41,7 +41,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                     aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"
                     style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>
-                <h3 class="mx-2" style="color: white;"> ${usuario != null ? 'Hola '+ usuario.name.toUpperCase() : ""} </h3>
+            <h3 class="mx-2" style="color: white;"> ${ usuario != null ? 'Hola ' + usuario.name.toUpperCase() : " "}  </h3>
         </form>
     </div>
 </div>

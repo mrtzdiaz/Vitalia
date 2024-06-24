@@ -40,7 +40,8 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 <input type="text" class="form-control" placeholder="Búsqueda..."
                     aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                    style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>z
+                    style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>
+            <h3 class="mx-2" style="color: white;"> ${usuario != null && usuario.login==true? 'Hola '+ usuario.name.toUpperCase() : ""} </h3>
         </form>
     </div>
 </div>

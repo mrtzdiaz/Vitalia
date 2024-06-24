@@ -19,30 +19,26 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                     <a class="nav-link" style="color: white;" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="../html/productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="../html/carrito.html">Carrito</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " style="color: white;" href="../html/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " style="color: white;" href="../html/contactanos.html">Contáctanos</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " style="color: white;" href="../html/registro.html">Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="../html/productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="../html/carrito.html">Carrito</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " style="color: white;" href="../html/nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " style="color: white;" href="../html/contactanos.html">Contáctanos</a>
+                    <a class="nav-link " style="color: white;" href="../html/iniciar_sesion.html">Iniciar Sesión</a>
                 </li>
             </ul>
-        </div>
-        <form class="d-none d-lg-flex ms-lg-5 mt-3 mt-lg-0">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Búsqueda..."
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                    style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>
-            <h3 class="mx-2" style="color: white;"> ${ usuario != null ? 'Hola ' + usuario.name.toUpperCase() : " "}  </h3>
-        </form>
+        </div>          
+        <h3 class="mx-2" style="color: white;"> ${usuario != null && usuario.login==true? 'Hola '+ usuario.name.toUpperCase() : ""} </h3>
     </div>
 </div>
 </div>

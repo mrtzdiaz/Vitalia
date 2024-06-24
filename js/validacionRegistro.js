@@ -105,7 +105,7 @@ btn.addEventListener("click", function (event) {
     }
 
     if (isValid) {
-        let usuarioNuevo = { 'name': `${nombre.value}`, 'lastName': `${apellido.value}`, 'email': `${email.value}`, 'password': `${contrasena.value}` }
+        let usuarioNuevo = { 'name': `${nombre.value}`, 'lastName': `${apellido.value}`, 'email': `${email.value}`, 'password': `${contrasena.value}`, 'login': false}
         agregarUsuarioLocalStorage(usuarioNuevo, 'usuario')
         mostrarAlerta("¡Registro creado exitosamente!", "success");
         nombre.value = "";

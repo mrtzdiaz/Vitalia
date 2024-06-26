@@ -110,6 +110,11 @@
     <script src="/js/navbar.js" defer></script>
     <script src="/js/footer.js" defer></script>
     <script src="/js/inicioSesion.js" type="text/javascript"></script>
-    
+    <script>
+      // Manejo de redirección al hacer clic en el botón
+      document.getElementById('btnRegistro').addEventListener('click', function() {
+          window.location.href = '../html/registro.html';
+      });
+  </script>
   </body>
 </html>

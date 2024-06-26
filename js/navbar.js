@@ -30,17 +30,36 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 <li class="nav-item">
                 <a class="nav-link " style="color: white;" href="../html/contactanos.html">Contáctanos</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-lg-none">
                     <a class="nav-link " style="color: white;" href="../html/registro.html">Registro</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " style="color: white;" href="../html/iniciar_sesion.html">Iniciar Sesión</a>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" style="color: white;" href="../html/iniciar_sesion.html">Iniciar Sesión</a>
                 </li>
             </ul>
-        </div>          
-        <h3 class="mx-2" style="color: white;"> ${usuario != null && usuario.login==true? 'Hola '+ usuario.name.toUpperCase() : ""} </h3>
     </div>
-</div>
+    <form class="d-none d-lg-flex ms-lg-5 mt-3 mt-lg-0">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Búsqueda..."
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                    style="color:white; border-color: #FF6B6B; background-color: #FF6B6B;">Buscar</button>
+        </form>
+    <div class="d-none d-lg-flex me-lg-3">
+        <div class="dropdown">
+            <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i>
+                    <span class="ms-1" style="color: white;">
+                        ${usuario != null && usuario.login == true ? 'Hola ' + usuario.name.toUpperCase() : ""}
+                    </span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end text-center">
+                <li><a class="nav-link" style="color: #143027;" href="../html/registro.html">Registro</a></li>
+                <li><a class="nav-link" style="color:  #143027;" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
+                
+            </ul>
+        </div>
+    </div>
 </div>
 </nav>`;
 

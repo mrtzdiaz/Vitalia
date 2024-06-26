@@ -1,12 +1,12 @@
+let inputs = document.querySelectorAll("form input");
 let nombre = document.getElementById("from_name");
 let apellido = document.getElementById("from_lastname");
 let email = document.getElementById("from_email");
 let contrasena = document.getElementById("from_password");
 let confirmaContrasena = document.getElementById("from_confirm_password");
 let alerta = document.getElementById("alertValidaciones");
-let isValid;
 let btn = document.getElementById("btn");
-let form = document.getElementById("form");
+let isValid;
 
 
 // VALIDACIONES NOMBRE
@@ -79,13 +79,7 @@ function agregarUsuarioLocalStorage(usuario, nombreVariable) {
 // EVENTO BOTON
 btn.addEventListener("click", function (event) {
     event.preventDefault();
-    alerta.style.display = "none";
-    alerta.innerHTML = "";
-    nombre.style.border = "";
-    apellido.style.border = "";
-    email.style.border = "";
-    contrasena.style.border = "";
-    confirmaContrasena.style.border = "";
+    limpiarAlarma();
     isValid = true;
 
     if (!validacionNombre()) {
@@ -116,54 +110,28 @@ btn.addEventListener("click", function (event) {
     }
 });
 
-// EVENTO INPUT NOMBRE
-nombre.addEventListener("blur", function (event) {
-    event.preventDefault();
-    nombre.value = nombre.value.trim();
-    limpiarAlarma()
-    if (nombre.value.length > 0) {
-        validacionNombre();
-    }
-});
-
-// EVENTO INPUT APELLIDO
-apellido.addEventListener("blur", function (event) {
-    event.preventDefault();
-    apellido.value = apellido.value.trim();
-    limpiarAlarma()
-    if (apellido.value.length > 0) {
-        validacionApellido();
-    }
-});
-
-// EVENTO INPUT EMAIL
-email.addEventListener("blur", function (event) {
-    event.preventDefault();
-    email.value = email.value.trim();
-    limpiarAlarma()
-    if (email.value.length > 0) {
-        validacionEmail();
-    }
-});
-
-// EVENTO INPUT CONTRASEÑA
-contrasena.addEventListener("blur", function (event) {
-    event.preventDefault();
-    contrasena.value = contrasena.value.trim();
-    limpiarAlarma()
-    if (contrasena.value.length > 0) {
-        validacionContrasenas();
-    }
-});
-
-// EVENTO INPUT CONFIRMA CONTRASEÑA
-confirmaContrasena.addEventListener("blur", function (event) {
-    event.preventDefault();
-    confirmaContrasena.value = confirmaContrasena.value.trim();
-    limpiarAlarma()
-    if (confirmaContrasena.value.length > 0) {
-        validacionContrasenas();
-    }
+// EVENTOS INPUTS 
+inputs.forEach((item) => {
+    item.addEventListener("focus", function (event) {
+        event.preventDefault();
+        limpiarAlarma();
+        item.value = item.value.trim();
+        if (nombre.value.length > 0) {
+            validacionNombre();
+        }
+        if (apellido.value.length > 0) {
+            validacionApellido();
+        }
+        if (email.value.length > 0) {
+            validacionEmail();
+        }
+        if (contrasena.value.length > 0) {
+            validacionContrasenas();
+        }
+        if (confirmaContrasena.value.length > 0) {
+            validacionContrasenas();
+        }
+    })
 });
 
 /* ----------- FUNCIONES ----------- */

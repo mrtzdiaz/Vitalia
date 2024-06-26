@@ -106,7 +106,7 @@ btn.addEventListener("click", function (event) {
 
 });
 
-// EVENTO INPUT NOMBRE
+// EVENTOS INPUTS 
 inputs.forEach((item) => {
     item.addEventListener("focus", function (event) {
         event.preventDefault();

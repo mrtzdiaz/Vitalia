@@ -54,6 +54,7 @@ document.getElementById('user_cel').addEventListener('input', function (e) {
     const cleanedValue = value.replace(/[^0-9]/g, '');
     input.value = cleanedValue;
 });
+
 // Permitir solo números
 document.getElementById('user_cel').addEventListener('keypress', function (e) {
     if (!/[0-9]/.test(e.key)) {

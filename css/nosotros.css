@@ -166,10 +166,6 @@
     font-size: 1.2rem;
   }
 
-  .navbar-brand img {
-    width: 150px;
-  }
-
   .acercade p {
     font-size: 1rem;
   }
@@ -203,10 +199,6 @@
     font-size: 1rem;
   }
 
-  .navbar-brand img {
-    width: 120px;
-  }
-
   .acercade p {
     font-size: 1rem;
   }
@@ -232,10 +224,6 @@
   @media (max-width: 476px) {
     .navbar-nav .nav-item {
       font-size: 1rem;
-    }
-  
-    .navbar-brand img {
-      width: 120px;
     }
 
     .wallpaper h1 {

@@ -4,6 +4,7 @@ let usuario = JSON.parse(localStorage.getItem("usuario"));
 
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark position-relative" style="background-color: #143027;">
 <div class="container-fluid">
+    
     <a class="navbar-brand mx-3" href="../index.html">
         <img src="../public/img/VITALIA LOGO.png" alt="VITALIA" width="200">
     </a>

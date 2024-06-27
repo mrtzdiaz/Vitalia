@@ -31,3 +31,8 @@
     padding: 20px;
   }
 
+  #btnRegistro a{
+    text-decoration: none;
+    color: white;
+  }
+

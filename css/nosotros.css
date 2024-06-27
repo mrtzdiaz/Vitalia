@@ -18,8 +18,10 @@
   text-shadow: #ff6b6b 4px 4px;
 }
 
-/* ACERCA DE */
+/* CARRUSEL ACERCA DE */
 .acercade {
+  display: flex;
+  justify-content: center;
   margin: 20px;
 }
 
@@ -164,14 +166,9 @@
     font-size: 1.2rem;
   }
 
-  .navbar-brand img {
-    width: 150px;
-  }
-
   .acercade p {
     font-size: 1rem;
   }
-
 
   .resumen {
     font-size: 0.9rem;
@@ -202,10 +199,6 @@
     font-size: 1rem;
   }
 
-  .navbar-brand img {
-    width: 120px;
-  }
-
   .acercade p {
     font-size: 1rem;
   }
@@ -227,13 +220,15 @@
   .contenedor-iconos .bi {
     font-size: 1rem;
   }
+
   @media (max-width: 476px) {
     .navbar-nav .nav-item {
       font-size: 1rem;
     }
-  
-    .navbar-brand img {
-      width: 120px;
+
+    .wallpaper h1 {
+      font-size: 200%;
+      text-shadow: #ff6b6b 3px 3px;
     }
   
     .acercade p {

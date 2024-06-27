@@ -80,3 +80,13 @@
 
 /* FIN CARRUSEL INDEX */
 
+@media (max-width: 500px){
+  .navbar img{
+    content: url(../public/img/vitaliacorazon.png);
+    height: 41px;
+    width: 45px;
+  }
+  .navbar{
+    min-height: 70px;
+  }
+}

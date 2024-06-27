@@ -46,9 +46,6 @@
       font-size: 1.2rem;
     }
   
-    .navbar-brand img {
-      width: 150px;
-    }
     .footer-primera-fila p,
     .footer-segunda-fila p,
     .nav-footer a {
@@ -61,12 +58,9 @@
   }
   
   @media (max-width: 576px) {
+
     .navbar-nav .nav-item {
       font-size: 1rem;
-    }
-  
-    .navbar-brand img {
-      width: 120px;
     }
   
     .contenedor-iconos .bi {

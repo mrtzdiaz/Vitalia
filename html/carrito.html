@@ -76,7 +76,7 @@
                     <small class="text-body-secondary">(25 ml)</small>
                     <small>Cantidad: 2</small>
                   </div>
-                  <span class="text-body-secondary">$180.00</span>
+                  <span class="text-body-secondary">$360.00</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                   <span>Total</span>
@@ -85,8 +85,19 @@
               </ul>
               <!-- DIRECCIÓN -->
             </div>
+            <hr class="my-4" />
             <div class="col-md-7 col-lg-8">
-              <h4 class="mb-3">Dirección de Facturación</h4>
+              <h4 class="my-3">Dirección de Facturación</h4>
+              <!-- ALERTA -->
+              <div id="alert-container" class="container"></div>
+              <div
+                class="alert alert-danger fade show"
+                style="display: none"
+                role="alert"
+                id="alertValidaciones"
+              >
+                <p id="alertValidacionesTexto"></p>
+              </div>
               <form class="needs-validation" novalidate>
                 <div class="row g-3">
                   <div class="col-sm-12">
@@ -94,7 +105,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="firstName"
+                      id="name"
                       placeholder="Nombre"
                       value=""
                       required
@@ -168,7 +179,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="zip"
+                      id="cp"
                       placeholder=""
                       required
                     />
@@ -180,8 +191,7 @@
 
                 <hr class="my-4" />
                 <!-- PAGO -->
-                <h4 class="mb-3">Pago</h4>
-
+                <h4 class="m-6">Pago</h4>
                 <div class="my-3">
                   <div class="form-check">
                     <input
@@ -223,13 +233,13 @@
 
                 <div class="row gy-3">
                   <div class="col-md-6">
-                    <label for="cc-name" class="form-label"
+                    <label for="tarjeta-name" class="form-label"
                       >Nombre en la tarjeta</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="cc-name"
+                      id="tarjeta-name"
                       placeholder=""
                       required
                     />
@@ -242,13 +252,13 @@
                   </div>
 
                   <div class="col-md-6">
-                    <label for="cc-number" class="form-label"
-                      >Número de la tarjeta</label
+                    <label for="tarjeta-numero" class="form-label"
+                      >Número en la tarjeta</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="cc-number"
+                      id="tarjeta-numero"
                       placeholder=""
                       required
                     />
@@ -258,13 +268,13 @@
                   </div>
 
                   <div class="col-md-3">
-                    <label for="cc-expiration" class="form-label"
+                    <label for="fecha-expiracion" class="form-label"
                       >Fecha de expiración</label
                     >
                     <input
-                      type="text"
+                      type="date"
                       class="form-control"
-                      id="cc-expiration"
+                      id="fecha-expiracion"
                       placeholder=""
                       required
                     />
@@ -278,7 +288,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="cc-cvv"
+                      id="tarjeta-cvv"
                       placeholder=""
                       required
                     />
@@ -286,8 +296,7 @@
                   </div>
                 </div>
 
-                <hr class="my-4" />
-                <div class="mb-5">
+                <div class="my-5">
                   <button class="w-100 btn btn-success btn-lg" type="submit">
                     Continua al pago
                   </button>
@@ -308,5 +317,6 @@
     ></script>
     <script src="/js/navbar.js" defer></script>
     <script src="/js/footer.js" defer></script>
+    <script src="/js/validacionCarrito.js" type="text/javascript"></script>
   </body>
 </html>

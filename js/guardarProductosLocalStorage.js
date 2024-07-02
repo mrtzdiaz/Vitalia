@@ -5,7 +5,7 @@ function leerArchivoJson(ubicacionArchivo, nombreVariableLocalStorage){
     .then(response => response.json())
     .then(data => {
   
-        if (this.localStorage.getItem(nombreVariableLocalStorage)==null){         
+        if (this.Item(nombreVariableLocalStorage)==null){         
             localStorage.setItem(nombreVariableLocalStorage, JSON.stringify(data));
         }
 

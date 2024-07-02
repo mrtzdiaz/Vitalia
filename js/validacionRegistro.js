@@ -42,6 +42,19 @@ function validacionEmail() {
         email.style.border = "solid red medium";
         return false
     }
+
+    const usuario = this.localStorage.getItem('usuario')
+
+    if (usuario!=null ) {
+        const usuarioJson = JSON.parse(usuario)
+        if(email.value == usuarioJson.email){
+            alerta.innerHTML += `Este <strong>Correo Electrónico</strong> ya ha sido utilizado<br>`;
+            alerta.style.display = "block";
+            email.style.border = "solid red medium";
+            return false
+        }
+    }
+
     return true
 };
 

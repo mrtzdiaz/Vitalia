@@ -45,7 +45,9 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark position-relative"
         </ul>
         </div>
 
-
+        <a href="../html/carrito.html" class="d-flex align-items-center" style="margin: 0px 15px; color: #fff;">
+        <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">

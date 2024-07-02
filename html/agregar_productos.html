@@ -37,15 +37,27 @@
                         <input name="from_name" type="text" class="form-control" id="from_name"
                             placeholder="Nombre del Producto">
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                         <label for="from_price" class="form-label">Precio</label>
                         <input name="from_price" type="number" class="form-control" id="from_price" placeholder="100.00">
+                    </div>
+                    <div class="col-6">
+                        <label for="categoria" class="form-label">Categoría</label>
+                    <select class="form-select" aria-label="Default select example" name="category" id="category">
+                        <option selected disabled>Selecciona una opción</option>
+                        <option value="1">Cuidado personal</option>
+                        <option value="2">Suplementos alimenticios</option>
+                        <option value="3">Medicamento homeópatico</option>
+                        <option value="4">Esencia</option>
+                        <option value="5">Otros</option>
+                      </select>
                     </div>
                     <div class="col-12">
                         <label for="description" class="form-label">Descripción</label>
                         <input name="description" type="text" class="form-control" id="description"
                             placeholder="Descripción">
                     </div>
+
                     <label for="formFile" class="form-label mb-0">Selecciona para agregar la imagen</label>
                     <div class="input-group mt-2">
                         <button class="btn" type="button" id="upload_widget">Seleccionar archivo</button>

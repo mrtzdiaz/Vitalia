@@ -43,7 +43,7 @@ function validacionEmail() {
         return false
     }
 
-    const usuario = this.localStorage.getItem('usuario')
+    const usuario = localStorage.getItem('usuario')
 
     if (usuario!=null ) {
         const usuarioJson = JSON.parse(usuario)

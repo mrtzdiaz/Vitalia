@@ -1,11 +1,12 @@
 //funcion para leer un json con los productos 
-function leerArchivoJson(ubicacionArchivo, nombreVariableLocalStorage){
+function leerArchivoJson(ubicacionArchivo, nombreVariableLocalStorage, tipo){
 
     fetch(ubicacionArchivo)
     .then(response => response.json())
     .then(data => {
   
-        if (this.Item(nombreVariableLocalStorage)==null){         
+        if ( localStorage.getItem(nombreVariableLocalStorage)==null){         
+
             localStorage.setItem(nombreVariableLocalStorage, JSON.stringify(data));
         }
 
@@ -13,5 +14,7 @@ function leerArchivoJson(ubicacionArchivo, nombreVariableLocalStorage){
     .catch(error => console.error('Error al cargar el archivo JSON:', error));
   }
   
-  leerArchivoJson('../js/productosPrincipales.json', 'productosPrincipales')
+//   leerArchivoJson('../js/productosPrincipales.json', 'productosPrincipales', 'principal')
+//   leerArchivoJson('../js/productosPrincipales.json', 'productosVarios', 'varios')
+  leerArchivoJson('../js/productosPrincipales.json', 'productosTodos', 'todos')
 

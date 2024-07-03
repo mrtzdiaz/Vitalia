@@ -32,23 +32,29 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 </li>
             </ul>
 
-            <div class="d-flex align-items-center ms-lg-3">
-                <div class="dropdown">
-                    <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:35px;"></i>
-                    <p class="accordion text-white ms-2 me-3">${usuario != null && usuario.login == true ? usuario.name.toUpperCase() : "Usuario"}</p>
-                    <button class="btn dropdown-toggle" style="color: #fff; padding: 0; border: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                        ${usuario != null && usuario.login == true ?
-                            `<li><a class="dropdown-item" onclick="cerrarSesion()" style="cursor: pointer;">Cerrar Sesión</a></li>` :
-                            `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
-                            <li><a class="dropdown-item" href="../html/registro.html">Registro</a></li>`}
-                    </ul>
-                </div>
+            <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff;">
+            <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
+        </a>
 
-                <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff;">
-                    <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
-                </a>
+        <div class="d-flex align-items-center ms-lg-3">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:35px;"></i>
+                <span class="text-white ms-2 me-3">
+                    ${usuario && usuario.login ? usuario.name.toUpperCase() : "Usuario"}
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                ${usuario && usuario.login ?
+                    `<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>` :
+                    `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
+                    <li><a class="dropdown-item" href="../html/registro.html">Registro</a></li>`}
+            </ul>
+        </div>
+    </div>
+    
+
+               
             </div>
         </div>
     </div>

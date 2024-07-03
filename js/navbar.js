@@ -14,7 +14,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0" >
                 <li class="nav-item">
                     <a class="nav-link" style="color: white;" href="../index.html">Inicio</a>
                 </li>
@@ -30,7 +30,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 <li class="nav-item">
                     <a class="nav-link" style="color: white;" href="../html/contactanos.html">Contáctanos</a>
                 </li>
-            </ul>
+            </ul> </div>
 
             <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff;">
             <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
@@ -56,7 +56,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
 
                
             </div>
-        </div>
+       
     </div>
 </nav>`;
 

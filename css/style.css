@@ -3,7 +3,19 @@
   font-weight: 500;
   font-style: normal;
   }
-  
+
+body::-webkit-scrollbar{
+  width: 0.6em;
+  background: #CCDBDC;
+ 
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #1A936F;
+  height: 80px;
+  border-radius: 0.5em;
+}
+
+
   .color-text {
     color: #1A936F;
   }

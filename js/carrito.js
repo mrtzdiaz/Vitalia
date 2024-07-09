@@ -38,12 +38,21 @@ let mainContainer = document.getElementById("productosCarrito");
 addItem(productosCarrito, mainContainer);
 
 
+function eliminarPrimerElementoConId(array, id) {
+  const indexToRemove = array.findIndex(item => item.id === id);
+  if (indexToRemove !== -1) {
+      // Crear una nueva copia del array excluyendo el primer elemento que coincide
+      return [...array.slice(0, indexToRemove), ...array.slice(indexToRemove + 1)];
+  }
+  return array; // Si no se encuentra ningún elemento, devolver el array original
+}
+
 
 function eliminarCarrito(index) {
 
     const productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
 
-    const nuevosProductosCarrito = productosCarrito.filter(item => item.id != index)
+    const nuevosProductosCarrito = eliminarPrimerElementoConId(productosCarrito, index)
 
     localStorage.setItem('productosCarrito', JSON.stringify(nuevosProductosCarrito))
 

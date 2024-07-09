@@ -3,6 +3,22 @@
   font-weight: 500;
   font-style: normal;
   }
+  /*--------CATEGORIAS-------*/
+
+  .img {
+    height: 221px;
+    width: 112%;
+    overflow: hidden;
+    border-radius:30%;
+}
+.titulo {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+
+
+
 /*PRODUCTOS*/
 
   .container-title{

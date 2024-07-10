@@ -30,13 +30,20 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 </li>
             </ul>
             </div>  
-            <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff;">
-            <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
-        </a>
-
+            
+            
+            
         <div class="d-flex align-items-center ms-lg-3">
+            <button class="btn d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button">
+                <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff; text-decoration: none;">
+                <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
+                <span class="text-white ms-2 me-3">
+                Carrito
+                </span>
+                </a>
+            </button> 
         <div class="dropdown">
-            <button class="btn dropdown-toggle" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn dropdown-toggle d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:35px;"></i>
                 <span class="text-white ms-2 me-3">
                     ${usuario && usuario.login ? usuario.name.toUpperCase() : "Usuario"}
@@ -44,8 +51,8 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                 ${usuario && usuario.login ?
-                    `<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>` :
-                    `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
+        `<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>` :
+        `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
                     <li><a class="dropdown-item" href="../html/registro.html">Registro</a></li>`}
             </ul>
         </div>
@@ -76,10 +83,10 @@ navbarItems.forEach(function (item) {
     }
 });
 
-function cerrarSesion(){
-        usuario.login = false;
-        localStorage.setItem("usuario", JSON.stringify(usuario));
-        window.location.href= "http://127.0.0.1:3003/index.html";
+function cerrarSesion() {
+    usuario.login = false;
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+    window.location.href = "http://127.0.0.1:3003/index.html";
 }
 
 

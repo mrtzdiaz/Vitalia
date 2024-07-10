@@ -68,8 +68,9 @@ function agregarCarrito(index) {
   if (localStorage.getItem('productosCarrito') != null) {
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
   }
-  const productosPrincipales = JSON.parse(localStorage.getItem('productosTodos'));
+ 
   productosCarrito.push(productosPrincipales[index])
+ 
   localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
   if (localStorage.getItem('productosCarrito') != null) {
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));

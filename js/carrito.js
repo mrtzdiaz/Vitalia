@@ -37,6 +37,18 @@ let productosCarrito = []
 let mainContainer = document.getElementById("productosCarrito");
 addItem(productosCarrito, mainContainer);
 
+function actualizarContadorProductos() {
+  let productosCarrito = JSON.parse(localStorage.getItem('productosCarrito')) || [];
+  let contadorProductos = document.getElementById("contadorProductos");
+
+  if (productosCarrito.length > 0) {
+      contadorProductos.style.display = "block";
+      contadorProductos.textContent = productosCarrito.length;
+  } else {
+      contadorProductos.style.display = "none";
+  }
+}
+
 
 function eliminarPrimerElementoConId(array, id) {
   const indexToRemove = array.findIndex(item => item.id === id);

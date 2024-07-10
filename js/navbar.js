@@ -41,10 +41,10 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
             <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
             <p id="contadorProductos" style="
                 position: absolute;
-                ${productosCarrito2.length == 0 ? 'display: none;' : ''}
+                ${productosCarrito2.length == 1 ? 'display: none;' : ''}
                 bottom: 0;
                 right: 0;
-                background: red;
+                background: #0a3722;
                 border-radius: 50px;
                 padding: 2px;
             ">

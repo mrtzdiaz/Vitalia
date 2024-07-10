@@ -91,16 +91,18 @@ function agregarCarrito(index) {
 }
 
 function addItem(item, container) {
-  item.forEach((element) => {
+  //productos = JSON.stringify(item);
+  JSON.parse(item).forEach((element) => {
+    console.log(element);
     container.insertAdjacentHTML("beforeend",
       `<div class="col">
             <div class="card">
             <div class="card-img">
-            <img src="${element.img}" class="mx-auto d-block" alt="Producto">
+            <img src="${element.imagen}" class="mx-auto d-block" alt="Producto">
             </div>
               <div class="card-body">
               <div class="card-title">
-              <h5 class="title">${element.name}</h5>
+              <h5 class="title">${element.nombre}</h5>
               </div>
                 <h5 id="rate">
                 <strong>5.0</strong>
@@ -110,7 +112,7 @@ function addItem(item, container) {
                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
                 <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
                 </h5>
-                <h3>${element.price}</h3>
+                <h3>$${element.precio}</h3>
                 <button type="button" class="btn mx-auto d-block" onclick="agregarCarrito(${element.id})"><strong>¡Lo quiero!</button>
                 </div>
             </div>
@@ -126,7 +128,22 @@ const arrayProductosPrincipales = arrayProductosTodos.filter(element => element.
 const arrayProductosVarios = arrayProductosTodos.filter(element => element.tipo == 'varios')
 const arrayProductosInyectables = arrayProductosTodos.filter(element => element.categoria == 'inyecion')
 
-addItem(arrayProductosVarios.slice(0, 3), carrusel1);
+/* addItem(arrayProductosVarios.slice(0, 3), carrusel1);
 addItem(arrayProductosVarios.slice(3, 6), carrusel2);
 addItem(arrayProductosVarios.slice(6, 9), carrusel3);
-addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 
+addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards  */
+
+function GETproductos(){
+  const requestOptions = {
+    method: "GET",
+    redirect: "follow"
+  };
+  
+  fetch("http://localhost:8090/api/productos/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => addItem(result,carrusel1))
+    .catch((error) => console.error(error));
+}
+
+GETproductos();
+

@@ -22,7 +22,6 @@ function validacionEmail() {
 
 };
 
-
 function mostrarAlerta(mensaje, tipo) {
     const alerta = document.getElementById('alert-container');
     const alertaDiv = document.createElement('div');

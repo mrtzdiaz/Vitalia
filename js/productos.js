@@ -29,54 +29,71 @@ let controlPage = document.querySelectorAll(".control-li a");
 //   ];
 
 navPage.forEach((item) => {
-    item.addEventListener("click",function(){
-        navPage.forEach((item) => {item.classList.remove("actived")});
-        this.classList.add('actived');
-    });
-});
-
-controlPage.forEach((item) => {
-  item.addEventListener("click",function(){
-      let activo = document.querySelector(".nums-li .actived");
-      let pagActiva = parseInt(activo.textContent) - 1;
-      let boton = item.textContent;
-      activo.classList.remove("actived");
-      if(boton == "Siguiente"){
-        try{
-          navPage.item(pagActiva+1).classList.add('actived');
-        }
-        catch(e){
-          navPage.item(0).classList.add('actived');
-        }
-      }
-      else{
-        try{
-          navPage.item(pagActiva-1).classList.add('actived');
-        }
-        catch(e){
-          navPage.item(navPage.length-1).classList.add('actived');
-        }
-      }
+  item.addEventListener("click", function () {
+    navPage.forEach((item) => { item.classList.remove("actived") });
+    this.classList.add('actived');
   });
 });
 
-function agregarCarrito(index){
-  let productosCarrito = []
+controlPage.forEach((item) => {
+  item.addEventListener("click", function () {
+    let activo = document.querySelector(".nums-li .actived");
+    let pagActiva = parseInt(activo.textContent) - 1;
+    let boton = item.textContent;
+    activo.classList.remove("actived");
+    if (boton == "Siguiente") {
+      try {
+        navPage.item(pagActiva + 1).classList.add('actived');
+      }
+      catch (e) {
+        navPage.item(0).classList.add('actived');
+      }
+    }
+    else {
+      try {
+        navPage.item(pagActiva - 1).classList.add('actived');
+      }
+      catch (e) {
+        navPage.item(navPage.length - 1).classList.add('actived');
+      }
+    }
+  });
+});
 
-  if ( localStorage.getItem('productosCarrito')!=null){         
+function agregarCarrito(index) {
+  let productosCarrito = []
+  let corazon = document.getElementById("corazon");
+  let contador = document.getElementById("contador");
+
+  if (localStorage.getItem('productosCarrito') != null) {
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
   }
   const productosPrincipales = JSON.parse(localStorage.getItem('productosTodos'));
   productosCarrito.push(productosPrincipales[index])
   localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
-  console.log('productosCarrito', productosCarrito)
-
+  if (localStorage.getItem('productosCarrito') != null) {
+    productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
+    corazon.style.display = "block";
+    if (productosCarrito.length <= 9) {
+      if (productosCarrito.length == 1) {
+        contador.style.margin = "5px 18px";
+      }else{
+        contador.style.margin = "5px 16px";
+      }
+      if (productosCarrito.length == 0) corazon.style.display = "none";
+      contador.innerHTML = productosCarrito.length;
+    }else {
+      contador.innerHTML = "9+";
+      contador.style.margin = "5px 13px";
+      contador.style.fontSize = "11px";
+  }
+  }
 }
 
-function addItem(item, container){
+function addItem(item, container) {
   item.forEach((element) => {
-      container.insertAdjacentHTML("beforeend",
-          `<div class="col">
+    container.insertAdjacentHTML("beforeend",
+      `<div class="col">
             <div class="card">
             <div class="card-img">
             <img src="${element.img}" class="mx-auto d-block" alt="Producto">
@@ -98,19 +115,18 @@ function addItem(item, container){
                 </div>
             </div>
           </div>`)
-      
   });
 }
 
 const arrayProductosTodos = JSON.parse(localStorage.getItem('productosTodos'));
 // se lee de localstorage la variable productosprincipales y se convierte en formato JSON
 
-   
-const arrayProductosPrincipales = arrayProductosTodos.filter(element => element.tipo == 'principal')
-const arrayProductosVarios = arrayProductosTodos.filter(element => element.tipo == 'varios') 
-const arrayProductosInyectables = arrayProductosTodos.filter(element => element.categoria == 'inyecion') 
 
-addItem(arrayProductosVarios.slice(0,3), carrusel1);
-addItem(arrayProductosVarios.slice(3,6), carrusel2);
-addItem(arrayProductosVarios.slice(6,9), carrusel3);
+const arrayProductosPrincipales = arrayProductosTodos.filter(element => element.tipo == 'principal')
+const arrayProductosVarios = arrayProductosTodos.filter(element => element.tipo == 'varios')
+const arrayProductosInyectables = arrayProductosTodos.filter(element => element.categoria == 'inyecion')
+
+addItem(arrayProductosVarios.slice(0, 3), carrusel1);
+addItem(arrayProductosVarios.slice(3, 6), carrusel2);
+addItem(arrayProductosVarios.slice(6, 9), carrusel3);
 addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 

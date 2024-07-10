@@ -2,6 +2,13 @@ let header = document.getElementsByTagName('header');
 
 let usuario = JSON.parse(localStorage.getItem("usuario"));
 
+let productosCarrito2 = []
+
+ if (localStorage.getItem('productosCarrito') != null) {
+    productosCarrito2 = JSON.parse(localStorage.getItem('productosCarrito'));
+ }
+
+
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
     <div class="container-fluid">
 
@@ -30,8 +37,20 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 </li>
             </ul>
             </div>  
-            <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff;">
+            <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff; position:relative;">
             <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
+            <p id="contadorProductos" style="
+                position: absolute;
+                ${productosCarrito2.length == 0 ? 'display: none;' : ''}
+                bottom: 0;
+                right: 0;
+                background: red;
+                border-radius: 50px;
+                padding: 2px;
+            ">
+                ${productosCarrito2.length}
+            </p>
+
         </a>
 
         <div class="d-flex align-items-center ms-lg-3">

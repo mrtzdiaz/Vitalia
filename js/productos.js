@@ -71,6 +71,10 @@ function agregarCarrito(index){
   localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
   console.log('productosCarrito', productosCarrito)
 
+  let contadorProductos = document.getElementById("contadorProductos");
+  console.log(contadorProductos.innerText)
+  contadorProductos.innerText = parseInt(contadorProductos.innerText)+1
+
 }
 
 function addItem(item, container){
@@ -98,8 +102,9 @@ function addItem(item, container){
                 </div>
             </div>
           </div>`)
-      
   });
+
+
 }
 
 const arrayProductosTodos = JSON.parse(localStorage.getItem('productosTodos'));

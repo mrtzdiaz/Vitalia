@@ -1,12 +1,5 @@
 let header = document.getElementsByTagName('header');
-
 let usuario = JSON.parse(localStorage.getItem("usuario"));
-
-let productosCarrito2 = []
-
- if (localStorage.getItem('productosCarrito') != null) {
-    productosCarrito2 = JSON.parse(localStorage.getItem('productosCarrito'));
- }
 
 
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
@@ -37,34 +30,35 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
                 </li>
             </ul>
             </div>  
-            <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff; position:relative;">
-            <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
-            <p id="contadorProductos" style="
-                position: absolute;
-                ${productosCarrito2.length == 1 ? 'display: none;' : ''}
-                bottom: 0;
-                right: 0;
-                background: #0a3722;
-                border-radius: 50px;
-                padding: 2px;
-            ">
-                ${productosCarrito2.length}
-            </p>
-
-        </a>
-
+            
         <div class="d-flex align-items-center ms-lg-3">
+            <button class="btn d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button">
+                <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff; text-decoration: none;">
+                    <div class="position-relative">
+                        <div class="position-absolute" style="margin:20px 10px; display:none;" id="corazon">
+                            <div class="position-absolute" style="margin:5px 16px; font-size:12px;" id="contador">
+                            0
+                            </div>
+                            <i class="bi bi-heart-fill" style="color:#ff6b6b; font-size:20px;"></i>
+                        </div>
+                        <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:40px;"></i>
+                    </div>
+                    <span class="text-white ms-2 me-3">
+                    Carrito
+                    </span>
+                </a>
+            </button> 
         <div class="dropdown">
-            <button class="btn dropdown-toggle" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:35px;"></i>
+            <button class="btn dropdown-toggle d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:40px;"></i>
                 <span class="text-white ms-2 me-3">
                     ${usuario && usuario.login ? usuario.name.toUpperCase() : "Usuario"}
                 </span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                 ${usuario && usuario.login ?
-                    `<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>` :
-                    `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
+        `<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>` :
+        `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
                     <li><a class="dropdown-item" href="../html/registro.html">Registro</a></li>`}
             </ul>
         </div>
@@ -76,9 +70,6 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
         </div>
     </div>
 </nav>`;
-
-
-header.item(0).insertAdjacentHTML('beforeend', navbar);
 
 // Obtener la URL de la página actual
 let url = window.location.href;
@@ -95,10 +86,34 @@ navbarItems.forEach(function (item) {
     }
 });
 
-function cerrarSesion(){
-        usuario.login = false;
-        localStorage.setItem("usuario", JSON.stringify(usuario));
-        window.location.href= "http://127.0.0.1:3003/index.html";
+function cerrarSesion() {
+    usuario.login = false;
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+    window.location.href = "http://127.0.0.1:3003/index.html";
 }
 
+function insertNav() {
+    header.item(0).insertAdjacentHTML('beforeend', navbar);
+    let corazon = document.getElementById("corazon");
+    let contador = document.getElementById("contador");
+    if (localStorage.getItem('productosCarrito') != null) {
+        productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
+        corazon.style.display = "block";
+        if (productosCarrito.length <= 9) {
+            if (productosCarrito.length == 1) {
+                contador.style.margin = "5px 18px";
+            } else {
+                contador.style.margin = "5px 16px";
+            }
+            if (productosCarrito.length == 0) corazon.style.display = "none";
+            contador.innerHTML = productosCarrito.length;
+        } else {
+            contador.innerHTML = "9+";
+            contador.style.margin = "5px 13px";
+            contador.style.fontSize = "11px";
+        }
+    }
+}
+
+insertNav();
 

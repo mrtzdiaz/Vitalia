@@ -6,7 +6,7 @@ let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 let usuario = usuarios.find(us => us.login);
 
  let logeado = (usuarios.find(us => us.login)==undefined?false:true);
- console.log(logeado)
+ 
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
     <div class="container-fluid">
 

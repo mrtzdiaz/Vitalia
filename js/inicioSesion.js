@@ -6,11 +6,12 @@ let form = document.getElementById("form");
 
 //VALIDACION EMAIL
 function validacionEmail() {
-    let registroUsuario = JSON.parse(localStorage.getItem("usuario"));
+    let registroUsuarios = JSON.parse(localStorage.getItem("usuarios"));
+    let registroActual = registroUsuarios.find(user=> user.email == inputEmail.value);
 
-    if(registroUsuario.email == inputEmail.value && registroUsuario.password ==  contrasena.value ){
-        registroUsuario.login = true;
-        localStorage.setItem("usuario", JSON.stringify(registroUsuario));
+    if(registroActual.email == inputEmail.value && registroActual.password ==  contrasena.value ){
+        registroActual.login = true;
+        localStorage.setItem("usuarios", JSON.stringify(registroUsuarios));
         window.location.href= "http://127.0.0.1:3003/index.html";
     }else {
         alerta.innerHTML += `No hemos podido validar tu usuario y/o contraseña, favor de verificar tus datos`;

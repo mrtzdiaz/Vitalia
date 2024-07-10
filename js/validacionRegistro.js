@@ -43,11 +43,10 @@ function validacionEmail() {
         return false
     }
 
-    const usuario = localStorage.getItem('usuario')
-
-    if (usuario != null) {
-        const usuarioJson = JSON.parse(usuario)
-        if (email.value == usuarioJson.email) {
+    const usuarios = localStorage.getItem('usuarios')
+    if (usuarios.length>0) {
+        let yaExisteElCorreo = usuarios.includes(email.value);
+        if(yaExisteElCorreo){
             alerta.innerHTML += `Este <strong>Correo Electrónico</strong> ya ha sido utilizado<br>`;
             alerta.style.display = "block";
             email.style.border = "solid red medium";
@@ -84,8 +83,18 @@ function compararContrasenas() {
 
 // funcion para agregar productos a localstorage
 function agregarUsuarioLocalStorage(usuario, nombreVariable) {
+    console.log("Usuario"+usuario)
+    console.log("nombre var "+ nombreVariable)
 
-    localStorage.setItem(nombreVariable, JSON.stringify(usuario)); // JSON.stringify pasa un json a un texto
+    let usuariosLocalStorage = localStorage.getItem(nombreVariable);
+
+    console.log("usuarios localstorage"+ usuariosLocalStorage)
+    let arrayUsuarios  = JSON.parse(usuariosLocalStorage);
+
+    arrayUsuarios.push(usuario);
+
+    localStorage.setItem(nombreVariable, JSON.stringify(arrayUsuarios)); // JSON.stringify pasa un json a un texto
+    console.log(arrayUsuarios);
 }
 
 /* ----------- EVENTOS DE LOS INPUTS Y BOTONES DE FORMULARIO ----------- */

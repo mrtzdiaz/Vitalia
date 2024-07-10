@@ -1,6 +1,6 @@
 let header = document.getElementsByTagName('header');
-
 let usuario = JSON.parse(localStorage.getItem("usuario"));
+
 
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
     <div class="container-fluid">
@@ -36,15 +36,23 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
         <div class="d-flex align-items-center ms-lg-3">
             <button class="btn d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button">
                 <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff; text-decoration: none;">
-                <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:35px;"></i>
-                <span class="text-white ms-2 me-3">
-                Carrito
-                </span>
+                    <div class="position-relative">
+                        <div class="position-absolute" style="margin:20px 10px; display:none;" id="corazon">
+                            <div class="position-absolute" style="margin:5px 16px; font-size:12px;" id="contador">
+                            0
+                            </div>
+                            <i class="bi bi-heart-fill" style="color:#ff6b6b; font-size:20px;"></i>
+                        </div>
+                        <i class="bi bi-bag-heart" style="color:#ccdbdc; font-size:40px;"></i>
+                    </div>
+                    <span class="text-white ms-2 me-3">
+                    Carrito
+                    </span>
                 </a>
             </button> 
         <div class="dropdown">
             <button class="btn dropdown-toggle d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:35px;"></i>
+                <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:40px;"></i>
                 <span class="text-white ms-2 me-3">
                     ${usuario && usuario.login ? usuario.name.toUpperCase() : "Usuario"}
                 </span>
@@ -64,9 +72,6 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
         </div>
     </div>
 </nav>`;
-
-
-header.item(0).insertAdjacentHTML('beforeend', navbar);
 
 // Obtener la URL de la página actual
 let url = window.location.href;
@@ -89,4 +94,28 @@ function cerrarSesion() {
     window.location.href = "http://127.0.0.1:3003/index.html";
 }
 
+function insertNav() {
+    header.item(0).insertAdjacentHTML('beforeend', navbar);
+    let corazon = document.getElementById("corazon");
+    let contador = document.getElementById("contador");
+    if (localStorage.getItem('productosCarrito') != null) {
+        productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
+        corazon.style.display = "block";
+        if (productosCarrito.length <= 9) {
+            if (productosCarrito.length == 1) {
+                contador.style.margin = "5px 18px";
+            } else {
+                contador.style.margin = "5px 16px";
+            }
+            if (productosCarrito.length == 0) corazon.style.display = "none";
+            contador.innerHTML = productosCarrito.length;
+        } else {
+            contador.innerHTML = "9+";
+            contador.style.margin = "5px 13px";
+            contador.style.fontSize = "11px";
+        }
+    }
+}
+
+insertNav();
 

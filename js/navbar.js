@@ -1,7 +1,12 @@
 let header = document.getElementsByTagName('header');
 
-let usuario = JSON.parse(localStorage.getItem("usuario"));
 
+let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
+let usuario = usuarios.find(us => us.login);
+
+ let logeado = (usuarios.find(us => us.login)==undefined?false:true);
+ console.log(logeado)
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
     <div class="container-fluid">
 
@@ -39,11 +44,11 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
             <button class="btn dropdown-toggle" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:35px;"></i>
                 <span class="text-white ms-2 me-3">
-                    ${usuario && usuario.login ? usuario.name.toUpperCase() : "Usuario"}
+                    ${logeado ? usuario.name.toUpperCase() : "Usuario"}
                 </span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                ${usuario && usuario.login ?
+                ${logeado ?
                     `<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>` :
                     `<li><a class="dropdown-item" href="../html/iniciar_sesion.html">Iniciar Sesión</a></li>
                     <li><a class="dropdown-item" href="../html/registro.html">Registro</a></li>`}
@@ -78,7 +83,7 @@ navbarItems.forEach(function (item) {
 
 function cerrarSesion(){
         usuario.login = false;
-        localStorage.setItem("usuario", JSON.stringify(usuario));
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
         window.location.href= "http://127.0.0.1:3003/index.html";
 }
 

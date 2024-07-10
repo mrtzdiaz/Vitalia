@@ -1,5 +1,5 @@
 let inputEmail = document.getElementById("from_email");
-let contrasena = document.getElementById("from_password");
+let inputContrasena = document.getElementById("from_password");
 let alerta = document.getElementById("alertValidaciones");
 let btn = document.getElementById("btn");
 let form = document.getElementById("form");
@@ -23,26 +23,54 @@ function validacionEmail() {
 
 };
 
-function mostrarAlerta(mensaje, tipo) {
-    const alerta = document.getElementById('alert-container');
-    const alertaDiv = document.createElement('div');
-    alertaDiv.className = `alert alert-${tipo} alert-dismissible fade show`;
-    alertaDiv.role = 'alert';
-    alertaDiv.innerHTML = `
-        ${mensaje}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    `;
-    alerta.appendChild(alertaDiv);
-};
-
 btn.addEventListener("click", function (event) {
     event.preventDefault();
     alerta.style.display = "none";
     alerta.innerHTML = "";
     inputEmail.style.border = "";
-    contrasena.style.border = "";
+    inputContrasena.style.border = "";
     isValid = true;
 
-    validacionEmail();
-    
+    if(inputEmail.value.length == 0 || inputContrasena.value.length == 0 ){
+        isValid = false;
+        alerta.innerHTML += `Verifica los campos`;
+        alerta.style.display = "block";
+        inputEmail.style.border = "solid red medium";
+        inputContrasena.style.border = "solid red medium";
+    }
+    if(isValid) {
+        POSTlogin(inputEmail.value, inputContrasena.value);
+    }
 });
+
+function POSTlogin(correo, contrasena){
+    const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "correo": `${correo}`,
+  "contrasena": `${contrasena}`
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8090/api/login/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    let respuesta = JSON.parse(result);
+    if(respuesta.accessToken == null){
+        alerta.innerHTML += "No hemos podido validar tu usuario y/o contraseña, favor de verificar tus datos";
+        alerta.style.display = "block";
+        inputEmail.style.border = "solid red medium";
+        inputContrasena.style.border = "solid red medium";
+    }else{
+        sessionStorage.setItem("usuario", JSON.stringify(respuesta));
+        window.location.href= "http://127.0.0.1:3003/index.html";
+    }
+});
+}

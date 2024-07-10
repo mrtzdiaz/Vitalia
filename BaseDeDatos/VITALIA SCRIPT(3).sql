@@ -21,15 +21,15 @@ INSERT INTO Vitalia.usuarios (nombre, apellido, correo, telefono, contrasena) VA
 INSERT INTO Vitalia.usuarios (nombre, apellido, correo, telefono, contrasena) VALUES ('Sofia', 'Rojas', 'sofiacarolinarojasflores@gmail.com', '5529726050', 'Sofiar123$');
 
 -- PEDIDO
-INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fechaentrega, forma_de_pago, Usuario_id) VALUES ( 'Pendiente', now() , '2024-06-29' , 'Tarjeta de crédito', 3);
-INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fechaentrega, forma_de_pago, Usuario_id) VALUES ( 'Entregado', '2024-06-20', '2024-06-27', 'Tarjeta de crédito', 2);
-INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fechaentrega, forma_de_pago, Usuario_id) VALUES ( 'Pendiente', now(), '2024-07-22', 'Débito', 1);
-INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fechaentrega, forma_de_pago, Usuario_id) VALUES ( 'Entregado', '2024-06-27', '2024-06-27', 'Tarjeta de crédito', 4);
-INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fechaentrega, forma_de_pago, Usuario_id) VALUES ('Cancelado', '2024-06-15', '2024-07-15', 'Tarjeta de crédito', 3);
+INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fecha_entrega, forma_de_pago, Usuario_id) VALUES ( 'Pendiente', now() , '2024-06-29' , 'Tarjeta de crédito', 3);
+INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fecha_entrega, forma_de_pago, Usuario_id) VALUES ( 'Entregado', '2024-06-20', '2024-06-27', 'Tarjeta de crédito', 2);
+INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fecha_entrega, forma_de_pago, Usuario_id) VALUES ( 'Pendiente', now(), '2024-07-22', 'Débito', 1);
+INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fecha_entrega, forma_de_pago, Usuario_id) VALUES ( 'Entregado', '2024-06-27', '2024-06-27', 'Tarjeta de crédito', 4);
+INSERT INTO Vitalia.Pedidos (status, fecha_pedido, fecha_entrega, forma_de_pago, Usuario_id) VALUES ('Cancelado', '2024-06-15', '2024-07-15', 'Tarjeta de crédito', 3);
 
 -- DETALLE DE PEDIDO
-INSERT INTO Vitalia.DetallesPedido (total, cantidadOrdenada, precio, id_producto, id_pedido) VALUES (350.00, 1, 350.00, 1, 3);
-INSERT INTO Vitalia.DetallesPedido (total, cantidadOrdenada, precio, id_producto, id_pedido) VALUES (1640.00, 4, 410.00, 3, 3);
-INSERT INTO Vitalia.DetallesPedido (total, cantidadOrdenada, precio, id_producto, id_pedido) VALUES (500.00, 3, 410.00, 3, 4);
-INSERT INTO Vitalia.DetallesPedido (total, cantidadOrdenada, precio, id_producto, id_pedido) VALUES (720.00, 2, 360.00, 2, 1);
-INSERT INTO Vitalia.DetallesPedido (total, cantidadOrdenada, precio, id_producto, id_pedido) VALUES (2520.00, 7, 360.0, 2,7);
+INSERT INTO Vitalia.DetallesPedido (total, cantidad_ordenada, precio, id_producto, id_pedido) VALUES (350.00, 1, 350.00, 1, 3);
+INSERT INTO Vitalia.DetallesPedido (total, cantidad_ordenada, precio, id_producto, id_pedido) VALUES (1640.00, 4, 410.00, 3, 3);
+INSERT INTO Vitalia.DetallesPedido (total, cantidad_ordenada, precio, id_producto, id_pedido) VALUES (500.00, 3, 410.00, 3, 4);
+INSERT INTO Vitalia.DetallesPedido (total, cantidad_ordenada, precio, id_producto, id_pedido) VALUES (720.00, 2, 360.00, 2, 1);
+INSERT INTO Vitalia.DetallesPedido (total, cantidad_ordenada, precio, id_producto, id_pedido) VALUES (2520.00, 7, 360.0, 2,4);

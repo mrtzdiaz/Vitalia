@@ -5,7 +5,6 @@
         "img": "/public/img/bebida.webp",
         "description": "Proteína aislada de soya, suero de leche deslactosada, dextrosa, lecitina de soya, Vitamina A (retinol), Vitamina D (calciferol), Vitamina C (ácido ascórbico), y sabor capuchino descafeinado.",
         "price": "$350.00",
-        "categoria": "suplementos_alimenticios",
         "tipo": "principal"
     },
     {
@@ -14,7 +13,6 @@
         "img": "/public/img/colageno.webp",
         "description": "Dentro de los beneficios del colágeno hidrolizado se encuentra la función como agente reparador del tejido colectivo del cuerpo, es por ello que este fármaco ha sido utilizado como tratamiento de algunas enfermedades relacionadas, como en osteoartritis y osteoporosis, ambas estrechamente ligadas a los huesos.",
         "price": "$360.00",
-        "categoria":"medicamento_homeopatico",
         "tipo": "principal"
     },
     {
@@ -23,7 +21,6 @@
         "img": "/public/img/esenciales.webp",
         "description": "Esencia natural extraída de la Flor de acebo, el castaño dulce y la genciana. Es una alternativa natural para acompañar tus estados de ánimo. Es seguro tanto para niños mayores de 7 años como para adultos.",
         "price": "$180.00",
-        "categoria": "esencia",
         "tipo": "principal"
     },
     {
@@ -32,7 +29,6 @@
         "img": "/public/img/image011.webp",
         "description": "Esencia natural extraída de flores silvestres, una alternativa natural para mejorar la calidad de vida.La planta se ha utilizado para curar heridas, abscesos, quemaduras, eczema y úlceras, para tratar el resfriado común y como carminativo, antiinflamatorio, antibacteriano, antifúngico, antiviral e inmunoestimulante.",
         "price": "$80.00",
-        "categoria": "esencia",
         "tipo": "principal"
     },
 
@@ -42,7 +38,6 @@
         "img":"/public/img/indias.webp",
         "description":"Auxiliar en problemas de varices, ulceras varicosas, trombosis y hemorroides",
         "price":"$198.00",
-        "categoria": "medicamento_homeopatico",
         "tipo": "varios"
     },
     {
@@ -51,7 +46,6 @@
         "img":"/public/img/jarabe azul.webp",
         "description":"Para el alivio de los sintomas del resfriado comun y tos.",
         "price":"$214.00",
-        "categoria": "medicamento_homeopatico",
         "tipo": "varios"
     },
     {
@@ -60,7 +54,6 @@
         "img":"/public/img/jarabe.webp",
         "description":"Auxiliar en el tratamiento de Tos, Flemas, Resfriado Común o Tos de Fumador.",
         "price":"$100.00",
-        "categoria": "medicamento_homeopatico",
         "tipo": "varios"
     },
     {
@@ -69,7 +62,6 @@
         "img":"/public/img/shampoo.webp",
         "description":"Shampoo natural Anticaída combate la caída y estimula el crecimiento de tu cabello con ingredientes naturales como la Sábila, espinosillo, ortiguilla, romero, coparche y cáscara de nogal; promoviendo un cabello sano y fuerte.",
         "price":"$410.00",
-        "categoria": "cuidado_personal",
         "tipo": "varios"
     },
     {
@@ -78,7 +70,6 @@
         "img":"/public/img/Eucalipto.jpg",
         "description":"Eucaliptine funciona como un auxiliar en el tratamiento de la tos seca y tos con flemas, así como en el alivio de la garganta irritada",
         "price":"$410.00",
-        "categoria": "medicamento_homeopatico",
         "tipo": "varios"
     },
     {
@@ -87,7 +78,6 @@
         "img":"/public/img/Fibravegetal.jpeg",
         "description":"Proteína vegetal en polvo sabor chocolate a base de chícharo y arroz, adicionado con enzimas y probióticos que ayudan a una buena salud digestiva",
         "price":"$300.00",
-        "categoria": "suplementos_alimenticios",
         "tipo": "varios"
     },
     {
@@ -96,7 +86,6 @@
         "img":"/public/img/Chiatenegro.png",
         "description":"Un té real para amantes de lo natural. Infusionado con hojas de té real, sin azúcares añadidos ni saborizantes y 100% natural.",
         "price":"$80.00",
-        "categoria": "otros",
         "tipo": "varios"
     },
     {
@@ -105,7 +94,6 @@
         "img":"/public/img/te-verde.jpg",
         "description":"#",
         "price":"$220.00",
-        "categoria": "otros",
         "tipo": "varios"
     },
     {
@@ -114,7 +102,6 @@
         "img":"/public/img/jarabeniño.webp",
         "description":"Auxiliar en el tratamiento de Tos y Flemas",
         "price":"$80.00",
-        "categoria": "medicamento_homeopatico",
         "tipo": "varios"
     }
 ]

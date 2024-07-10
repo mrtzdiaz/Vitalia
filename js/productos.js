@@ -66,10 +66,11 @@ function agregarCarrito(index){
   if ( localStorage.getItem('productosCarrito')!=null){         
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
   }
-
-  const productosTodos = JSON.parse(localStorage.getItem('productosTodos'));
-  productosCarrito.push(productosTodos.find((element) => element.id == index))
+  const productosPrincipales = JSON.parse(localStorage.getItem('productosTodos'));
+  productosCarrito.push(productosPrincipales[index])
   localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
+  console.log('productosCarrito', productosCarrito)
+
 }
 
 function addItem(item, container){
@@ -106,25 +107,10 @@ const arrayProductosTodos = JSON.parse(localStorage.getItem('productosTodos'));
 
    
 const arrayProductosPrincipales = arrayProductosTodos.filter(element => element.tipo == 'principal')
-
+const arrayProductosVarios = arrayProductosTodos.filter(element => element.tipo == 'varios') 
 const arrayProductosInyectables = arrayProductosTodos.filter(element => element.categoria == 'inyecion') 
 
-
-
-// addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 
-
-
-const pagina = window.location.pathname.split('/')[2].split('.')[0]
-console.log(pagina)
-const categorias = ['cuidado_personal', 'suplementos_alimenticios', 'medicamento_homeopatico', 'esencia','otros']
-
-if( categorias.includes(pagina) ){
-  const arrayProductos = arrayProductosTodos.filter(element => element.categoria == pagina)
-  addItem(arrayProductos, mainContainer);
-}else{
-  const arrayProductosVarios = arrayProductosTodos.filter(element => element.tipo == 'varios') 
-  addItem(arrayProductosVarios.slice(0,3), carrusel1);
-  addItem(arrayProductosVarios.slice(3,6), carrusel2);
-  addItem(arrayProductosVarios.slice(6,9), carrusel3);
-
-}
+addItem(arrayProductosVarios.slice(0,3), carrusel1);
+addItem(arrayProductosVarios.slice(3,6), carrusel2);
+addItem(arrayProductosVarios.slice(6,9), carrusel3);
+addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards 

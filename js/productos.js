@@ -74,7 +74,7 @@ function agregarCarrito(index) {
   if (localStorage.getItem('productosCarrito') != null) {
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
     corazon.style.display = "block";
-    if (productosCarrito.length < 9) {
+    if (productosCarrito.length <= 9) {
       if (productosCarrito.length == 1) {
         contador.style.margin = "5px 18px";
       }else{
@@ -115,7 +115,6 @@ function addItem(item, container) {
                 </div>
             </div>
           </div>`)
-
   });
 }
 

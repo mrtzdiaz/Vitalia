@@ -31,8 +31,6 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
             </ul>
             </div>  
             
-            
-            
         <div class="d-flex align-items-center ms-lg-3">
             <button class="btn d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button">
                 <a href="../html/carrito.html" class="d-flex align-items-center ms-lg-3" style="color: #fff; text-decoration: none;">

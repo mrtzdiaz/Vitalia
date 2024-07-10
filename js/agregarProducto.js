@@ -95,7 +95,6 @@ function validacionImagen(elemento) {
 //-------- Evento Boton---------//
 btnAgregar.addEventListener("click", function (event) {
   event.preventDefault();
-  let nuevosProductos = [];
   alerta.innerHTML = ""
 
 
@@ -110,7 +109,7 @@ btnAgregar.addEventListener("click", function (event) {
 
   if (precioCorrecto)
     precio.style.border = "solid #dee2e6 medium";
-  
+
   if (descripcionCorrecta)
     descripcion.style.border = "solid #dee2e6 medium";
 
@@ -119,15 +118,13 @@ btnAgregar.addEventListener("click", function (event) {
 
   if (nombreCorrecto && descripcionCorrecta && precioCorrecto && imagenCorrecta) {
     alerta.style.display = "none"; // si pasa la validacion se oculta la alerta
-
-
-    // se crea un objeto con los datos del producto 
-    let productoNuevo = { 'name': `${nombre.value}`, 'img': `${imagen.value}`, 'description': `${descripcion.value}`, 'price': `$${precio.value}` }
-    nuevosProductos.push(productoNuevo) // se agrega el producto al arraglo de nuevos productos 
-
-    agregarProductoLocalStorage(productoNuevo, 'productosPrincipales') // se creo una funcion para agregar el producto al local storage
-    mostrarAlerta("¡Producto Agregado!","success"); // se muestra la alerta de exitos
-
+    if (token != null) {
+      POSTproductos(nombre.value, descripcion.value, imagen.value, precio.value, 1);
+      mostrarAlerta("¡Producto Agregado!", "success"); // se muestra la alerta de exitos
+    } else {
+      alerta.innerHTML += `No tienes el permiso para agregar productos`;
+      alerta.style.display = "block";
+    }
 
     // se limpia el formulario para que se puede ingresar un nuevo producto 
     nombre.value = ""
@@ -145,3 +142,31 @@ btnCarga.addEventListener("click", function (event) {
 },
   false
 );
+
+function POSTproductos(nombre, descripcion, imagen, precio, categoria) {
+  const myHeaders = new Headers();
+  let token = JSON.parse(sessionStorage.getItem("usuario"));
+
+  myHeaders.append("Authorization", `Bearer: ${token.accessToken}`);
+  myHeaders.append("Content-Type", "application/json");
+
+  const raw = JSON.stringify({
+    "nombre": `${nombre}`,
+    "descripcion": `${descripcion}`,
+    "imagen": `${imagen}`,
+    "precio": precio,
+    "categoria_id": categoria
+  });
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow"
+  };
+
+  fetch("http://localhost:8090/api/productos/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+}

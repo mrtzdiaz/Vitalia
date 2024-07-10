@@ -1,4 +1,5 @@
 let footer = document.getElementsByTagName("footer");
+let token = JSON.parse(sessionStorage.getItem("usuario"));
 
 let footerHTML = `<div class="contenedor-footer">
                 <div class="container-fluid">
@@ -33,8 +34,8 @@ let footerHTML = `<div class="contenedor-footer">
                             <a href="../html/carrito.html">Carrito</a>
                             <a href="../html/nosotros.html">Nosotros</a>
                             <a href="../html/contactanos.html">Contáctanos</a>
-                            <a href="../html/agregar_productos.html">Agregar producto</a> 
-
+                            ${(token == null)? 
+                                ` `:`<a href="../html/agregar_productos.html">Agregar producto</a>`}
                         </div>
                         <div class="col-12 col-lg-5 text-center  text-lg-end mt-4 mt-md-0">
                             <p>¡Únete a nuestra comunidad en redes sociales! Vitalia, siempre presente.</p>

@@ -1,13 +1,11 @@
 let header = document.getElementsByTagName('header');
 
 
-let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+let usuariolog = JSON.parse(sessionStorage.getItem("usuario"));
 let usuario = null
 let logeado = null
-if(usuarios != null){
-    usuario = usuarios.find(us => us.login);
-    logeado = (usuarios.find(us => us.login)==undefined?false:true);
-   
+if(usuariolog != null){
+    logeado = true;
 }
      
 let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #143027;">
@@ -60,7 +58,7 @@ let navbar = `<nav class="navbar navbar-expand-lg navbar-dark" style="background
             <button class="btn dropdown-toggle d-flex align-items-center" style="color: #fff; padding: 0; border: none; background: none;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle" style="color:#ccdbdc; font-size:40px;"></i>
                 <span class="text-white ms-2 me-3">
-                    ${logeado ? usuario.name.toUpperCase() : "Usuario"}
+                    ${logeado ? usuariolog.username.toUpperCase() : "Usuario"}
                 </span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -95,8 +93,7 @@ navbarItems.forEach(function (item) {
 });
 
 function cerrarSesion(){
-        usuario.login = false;
-        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        sessionStorage.removeItem("usuario");
         window.location.href= "http://127.0.0.1:3003/index.html";
 }
 

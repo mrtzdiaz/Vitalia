@@ -121,10 +121,9 @@ btn.addEventListener("click", function (event) {
     }
 
     if (isValid) {
-        let usuarioNuevo = { 'name': `${nombre.value}`, 'lastName': `${apellido.value}`, 'email': `${email.value}`, 'password': `${contrasena.value}`, 'login': false}
-
-        agregarUsuarioLocalStorage(usuarioNuevo, 'usuarios');
-        
+        /* let usuarioNuevo = { 'name': `${nombre.value}`, 'lastName': `${apellido.value}`, 'email': `${email.value}`, 'password': `${contrasena.value}`, 'login': false }
+        agregarUsuarioLocalStorage(usuarioNuevo, 'usuario') */
+        POSTusuarios(apellido.value, contrasena.value, email.value, nombre.value, "3320861076");
         mostrarAlerta("¡Registro creado exitosamente!", "success");
         nombre.value = "";
         apellido.value = "";
@@ -182,3 +181,29 @@ function limpiarAlarma() {
     contrasena.style.border = "";
     confirmaContrasena.style.border = "";
 };
+
+
+function POSTusuarios(apellido, contrasena, correo, nombre, telefono) {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        "apellido": `${apellido}`,
+        "contrasena": `${contrasena}`,
+        "correo": `${correo}`,
+        "nombre": `${nombre}`,
+        "telefono": `${telefono}`
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch("http://localhost:8090/api/usuarios/", requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
+}

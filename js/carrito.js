@@ -1,4 +1,5 @@
 function addItem(item, container) {
+    console.log('hola')
     item.forEach((element) => {
         container.insertAdjacentHTML("beforeend",
             `

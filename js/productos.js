@@ -119,6 +119,8 @@ function GETproductos(){
     .then((result) => {
       addItem(JSON.parse(result).slice(0, 3),carrusel1)
       addItem(JSON.parse(result).slice(3, 6),carrusel2)
+      addItem(JSON.parse(result).slice(6, 9),carrusel3)
+      addItem(JSON.parse(result).slice(9),mainContainer)
     })
     .catch((error) => console.error(error));
 }

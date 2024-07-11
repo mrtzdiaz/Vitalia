@@ -114,7 +114,7 @@ function GETproductos(){
     redirect: "follow"
   };
   
-  fetch("http://localhost:8090/api/productos/", requestOptions)
+  fetch("http://52.14.158.52/api/productos/", requestOptions)
     .then((response) => response.text())
     .then((result) => {
       addItem(JSON.parse(result).slice(0, 3),carrusel1)

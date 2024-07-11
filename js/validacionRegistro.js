@@ -202,7 +202,7 @@ function POSTusuarios(apellido, contrasena, correo, nombre, telefono) {
         redirect: "follow"
     };
 
-    fetch("http://localhost:8090/api/usuarios/", requestOptions)
+    fetch("http://52.14.158.52/api/usuarios/", requestOptions)
         .then((response) => response.text())
         .then((result) => console.log(result))
         .catch((error) => console.error(error));

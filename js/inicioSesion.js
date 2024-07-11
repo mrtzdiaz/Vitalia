@@ -12,7 +12,7 @@ function validacionEmail() {
     if(registroActual.email == inputEmail.value && registroActual.password ==  contrasena.value ){
         registroActual.login = true;
         localStorage.setItem("usuarios", JSON.stringify(registroUsuarios));
-        window.location.href= "http://127.0.0.1:3003/index.html";
+        window.location.href= "http://52.14.158.52/index.html";
     }else {
         alerta.innerHTML += `No hemos podido validar tu usuario y/o contraseña, favor de verificar tus datos`;
         alerta.style.display = "block";
@@ -59,7 +59,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8090/api/login/", requestOptions)
+fetch("http://52.14.158.52/api/login/", requestOptions)
   .then((response) => response.text())
   .then((result) => {
     let respuesta = JSON.parse(result);
@@ -70,7 +70,7 @@ fetch("http://localhost:8090/api/login/", requestOptions)
         inputContrasena.style.border = "solid red medium";
     }else{
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));
-        window.location.href= "http://127.0.0.1:3003/index.html";
+        window.location.href= "http://52.14.158.52/index.html";
     }
-});
+})
 }

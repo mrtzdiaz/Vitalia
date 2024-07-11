@@ -47,7 +47,10 @@ function agregarCarrito(index) {
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
   }
   const productosPrincipales = JSON.parse(localStorage.getItem('productosTodos'));
-  productosCarrito.push(productosPrincipales[index])
+  
+  productosCarrito.push(productosPrincipales.find((element) => element.id == index))
+  
+  
   localStorage.setItem('productosCarrito', JSON.stringify(productosCarrito))
   if (localStorage.getItem('productosCarrito') != null) {
     productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
@@ -103,27 +106,36 @@ const arrayProductosTodos = JSON.parse(localStorage.getItem('productosTodos'));
 
 const arrayProductosPrincipales = arrayProductosTodos.filter(element => element.tipo == 'principal')
 const arrayProductosVarios = arrayProductosTodos.filter(element => element.tipo == 'varios')
-const arrayProductosInyectables = arrayProductosTodos.filter(element => element.categoria == 'inyecion')
+
+
+addItem(arrayProductosTodos.slice(0, 3),carrusel1)
+addItem(arrayProductosTodos.slice(3, 6),carrusel2)
+addItem(arrayProductosTodos.slice(6, 9),carrusel3)
+addItem(arrayProductosTodos.slice(9),mainContainer)
 
 
 //addItem(arrayProductosPrincipales, mainContainer); // se va a cargar el arreglo de productos principales para construis cards  */
 
-function GETproductos(){
-  const requestOptions = {
-    method: "GET",
-    redirect: "follow"
-  };
-  
-  fetch("http://52.14.158.52/api/productos/", requestOptions)
-    .then((response) => response.text())
-    .then((result) => {
-      addItem(JSON.parse(result).slice(0, 3),carrusel1)
-      addItem(JSON.parse(result).slice(3, 6),carrusel2)
-      addItem(JSON.parse(result).slice(6, 9),carrusel3)
-      addItem(JSON.parse(result).slice(9),mainContainer)
-    })
-    .catch((error) => console.error(error));
-}
+// function GETproductos(){
 
-GETproductos();
+//   const requestOptions = {
+//     method: "GET",
+//     redirect: "follow"
+//   };
+  
+//   fetch("http://52.14.158.52/ap, requestOptioni/productos/"s)
+//     .then((response) => response.text())
+//     .then((result) => {
+
+
+      
+//       addItem(JSON.parse(result).slice(0, 3),carrusel1)
+//       addItem(JSON.parse(result).slice(3, 6),carrusel2)
+//       addItem(JSON.parse(result).slice(6, 9),carrusel3)
+//       addItem(JSON.parse(result).slice(9),mainContainer)
+//     })
+//     .catch((error) => console.error(error));
+// }
+
+// GETproductos();
 

@@ -4,12 +4,12 @@ function addItem(item, container) {
         container.insertAdjacentHTML("beforeend",
             `
             <div class="col-4">
-                <img src="${element.img}" class="mx-auto d-block" alt="Producto" width ="100px">   
+                <img src="${element.imagen}" class="mx-auto d-block" alt="Producto" width ="100px">   
             </div>
             <div class="col-8">
             <div class="card-body">
             <div class="card-title">
-            <h5 class="title">${element.name}</h5>
+            <h5 class="title">${element.nombre}</h5>
             </div>
               <h5 id="rate">
               <strong>5.0</strong>
@@ -19,7 +19,7 @@ function addItem(item, container) {
               <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
               <i class="bi bi-star-fill" style="color:#E5C900; margin:0; font-size: 20px;"></i>
               </h5>
-              <h3>${element.price}</h3>
+              <h3>${element.precio}</h3>
             <button type="button" class="btn btn-danger mx-auto d-block" onclick="eliminarCarrito(${element.id})"><i class="bi bi-trash-fill"></i></button>
           </div>
             </div>
@@ -32,14 +32,14 @@ function addItem(item, container) {
 let productosCarrito = []
 
  if (localStorage.getItem('productosCarrito') != null) {
-    productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
+  productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
  }
 let mainContainer = document.getElementById("productosCarrito");
 addItem(productosCarrito, mainContainer);
 
 function actualizarContadorProductos() {
   let productosCarrito = JSON.parse(localStorage.getItem('productosCarrito')) || [];
-  let contadorProductos = document.getElementById("contadorProductos");
+  let contadorProductos = document.getElementById("productosCarrito");
 
   if (productosCarrito.length > 0) {
       contadorProductos.style.display = "block";
@@ -64,9 +64,9 @@ function eliminarCarrito(index) {
 
     const productosCarrito = JSON.parse(localStorage.getItem('productosCarrito'));
 
-    const nuevosProductosCarrito = eliminarPrimerElementoConId(productosCarrito, index)
+    const nuevosproductosCarrito = eliminarPrimerElementoConId(productosCarrito, index)
 
-    localStorage.setItem('productosCarrito', JSON.stringify(nuevosProductosCarrito))
+    localStorage.setItem('productosCarrito', JSON.stringify(nuevosproductosCarrito))
 
     location.reload();
 }

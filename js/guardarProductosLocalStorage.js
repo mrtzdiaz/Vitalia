@@ -1,7 +1,11 @@
 //funcion para leer un json con los productos 
 function leerArchivoJson(ubicacionArchivo, nombreVariableLocalStorage, tipo){
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow"
+    };
 
-    fetch(ubicacionArchivo)
+    fetch(ubicacionArchivo, requestOptions)
     .then(response => response.json())
     .then(data => {
   
@@ -16,5 +20,6 @@ function leerArchivoJson(ubicacionArchivo, nombreVariableLocalStorage, tipo){
   
 //   leerArchivoJson('../js/productosPrincipales.json', 'productosPrincipales', 'principal')
 //   leerArchivoJson('../js/productosPrincipales.json', 'productosVarios', 'varios')
-  leerArchivoJson('../js/productosPrincipales.json', 'productosTodos', 'todos')
+// leerArchivoJson('../js/productosPrincipales.json', 'productosTodos', 'todos')  
+leerArchivoJson("http://52.14.158.52/api/productos/", 'productosTodos', 'todos')
 
